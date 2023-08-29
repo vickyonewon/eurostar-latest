@@ -5,11 +5,14 @@ import Home from './pages/Home/home-view';
 import About from './pages/About/about-view';
 import Rooms from './pages/Rooms/rooms-view';
 import Contact from './pages/Contact/contact-view';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 
 function App() {
   return (
     <div className="App">
+      <Provider store={store}>
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -18,6 +21,7 @@ function App() {
         <Route path='/contact-us' element={<Contact />} />
       </Routes>
       </BrowserRouter>
+      </Provider>
     </div>
   );
 }

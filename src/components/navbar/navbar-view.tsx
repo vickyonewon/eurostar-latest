@@ -12,14 +12,14 @@ const Navbar = ({textColor}: props) => {
   const useNavbarController=NavbarController();
 
   return (
-    <nav className="sticky top-0">
+    <nav className="sticky top-0 z-[1000]">
       <div className="container mx-auto">
         <div className="flex items-center py-4">
           <Link className="navbar-brand mr-10" to="/">
             <img src="/assets/eurostar-logo.gif" alt="logo" className="w-36" data-aos='fade-right' />
           </Link>
           <button
-            className="md:hidden mx-4 text-white absolute right-2"
+            className="lg:hidden mx-4 text-white absolute right-2"
             onClick={useNavbarController.toggleMenu}
             aria-label="Toggle navigation"
           >
@@ -47,8 +47,8 @@ const Navbar = ({textColor}: props) => {
               )}
             </svg>
           </button>
-          <div className={`md:flex justify-between md:space-x-8 ${useNavbarController.isOpen ? 'block' : 'hidden'}`}>
-          <div className="flex flex-col md:flex-row space-x-10 justify-center items-center">
+          <div className={`lg:flex justify-between lg:space-x-8 ${useNavbarController.isOpen ? 'block' : 'hidden'}`}>
+          <div className="flex flex-col lg:flex-row space-x-10 justify-center items-center">
               <Link
                 className={`nav-link text-[1.3rem] hover:text-[#a45c32] ${
                   useNavbarController.isRouteActive('/') ? 'text-[#a45c32]' : `text-${textColor}`
@@ -103,10 +103,10 @@ const Navbar = ({textColor}: props) => {
             <Link className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32]  ${useNavbarController.isRouteActive('/contact-us') ? 'text-[#a45c32]' : `text-${textColor}`}`} to="/contact-us">
               Contact
             </Link>
-            <button className='border-none bg-[#ab6034] md:hidden m-2 text-[1.1rem] text-white w-40 h-12 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
+            <button className='border-none bg-[#ab6034] lg:hidden m-2 text-[1.1rem] text-white w-40 h-12 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
           </div>
           <div className='absolute right-10 top-5'>
-            <button className='border-none bg-[#ab6034] text-[1.1rem] hidden md:block text-white w-40 h-12 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
+            <button className='border-none bg-[#ab6034] text-[1.1rem] hidden lg:block text-white w-40 h-12 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
           </div>
           </div>
         </div>
