@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import Navbar from '../../components/navbar/navbar-view';
 
 
 const Contact = () => {
-  const count=useSelector((state: any)=> state.counter.value);
   return (
-    <div>Contact: {count}</div>
+    <div>
+      <Navbar textColor='black' />
+      Contact</div>
   )
 }
 

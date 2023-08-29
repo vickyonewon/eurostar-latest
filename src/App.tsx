@@ -5,13 +5,12 @@ import Home from './pages/Home/home-view';
 import About from './pages/About/about-view';
 import Rooms from './pages/Rooms/rooms-view';
 import Contact from './pages/Contact/contact-view';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/navbar/navbar-view';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
