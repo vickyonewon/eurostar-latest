@@ -5,7 +5,7 @@ import Home from './pages/Home/home-view';
 import About from './pages/About/about-view';
 import Rooms from './pages/Rooms/rooms-view';
 import Contact from './pages/Contact/contact-view';
-import Navbar from './components/navbar/navbar-view';
+
 
 function App() {
   return (

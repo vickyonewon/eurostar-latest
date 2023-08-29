@@ -74,24 +74,24 @@ const Navbar = ({textColor}: props) => {
                 >
                   Rooms
                 </Link>
-              <ul className="group dropdown-menu border bg-white border-gray-800 w-[15rem] px-10 hidden rounded rounded-1xl absolute z-[1000] py-6 mt-2 space-y-2 bg- group-hover:block">
+              <ul className="group dropdown-menu border justify-center items-center text-center bg-white border-gray-800 w-[15rem] hidden rounded rounded-1xl absolute z-[1000] py-4 mt-0 space-y-2 group-hover:block">
                 <li>
-                  <Link className="dropdown-item m-2" to="/rooms/executive-rooms">
+                  <Link className="dropdown-item hover:bg-blue-200 px-10 py-2" to="/rooms/executive-rooms">
                     Executive Rooms
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item m-2" to="/rooms/deluxe-rooms">
+                  <Link className="dropdown-item hover:bg-blue-200 px-10 py-2" to="/rooms/deluxe-rooms">
                     Deluxe Rooms
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item m-2" to="/rooms/luxury-rooms">
+                  <Link className="dropdown-item hover:bg-blue-200 px-10 py-2" to="/rooms/luxury-rooms">
                     Luxury Rooms
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item m-2" to="/rooms/standard-rooms">
+                  <Link className="dropdown-item hover:bg-blue-200 px-10 py-2" to="/rooms/standard-rooms">
                     Standard Rooms
                   </Link>
                 </li>
