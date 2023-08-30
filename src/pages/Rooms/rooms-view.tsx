@@ -6,7 +6,7 @@ import Navbar from '../../components/navbar/navbar-view';
 const Rooms = () => {
   return (
     <div>
-      <Navbar textColor='black' />
+      <Navbar bgColor='#f4f2f1' textColor='black' />
 
     </div>
   )

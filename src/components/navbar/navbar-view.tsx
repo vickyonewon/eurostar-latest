@@ -5,14 +5,15 @@ import { useLocation } from 'react-router-dom';
 import NavbarController from './navbar-controller';
 
 interface props{
-  textColor: string
+  textColor: string,
+  bgColor: '#1d1b1a' | '#f4f2f1' ,
 }
 
-const Navbar = ({textColor}: props) => {
+const Navbar = ({textColor, bgColor}: props) => {
   const useNavbarController=NavbarController();
 
   return (
-    <nav className="sticky top-0 z-[1000]">
+    <nav className={`sticky top-0 z-[1000] bg-[${bgColor}]`}>
       <div className="container mx-auto">
         <div className="flex items-center py-4">
           <Link className="navbar-brand mr-10" to="/">

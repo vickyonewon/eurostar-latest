@@ -62,8 +62,10 @@ import Navbar from '../../components/navbar/navbar-view';
   
   const About: React.FC = () => {
     return (
+      <div>
+        <Navbar bgColor='#f4f2f1' textColor='black' />
       <div className="bg-gray-100">
-        <Navbar textColor='black' />
+        
         <div className="text-center bg-cover bg-center bg-no-repeat h-96 flex md:flex-col flex-row justify-center items-center text-gray-800" style={{ backgroundImage: `url('/assets/gold_bg.webp')` }}>
           <h1 className="text-6xl font-semibold mb-4 relative">About Us</h1>
         </div>
@@ -98,6 +100,7 @@ import Navbar from '../../components/navbar/navbar-view';
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     );
