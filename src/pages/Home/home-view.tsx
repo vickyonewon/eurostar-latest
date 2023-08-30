@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Navbar from "../../components/navbar/navbar-view";
+import Navbar from "../../components/navbar";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import {rooms, facilities} from './constants/data';
