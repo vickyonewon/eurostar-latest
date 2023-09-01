@@ -1,21 +1,68 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/navbar/navbar-view";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import {rooms, facilities} from './constants/data';
+import { rooms, facilities, suites, customers, news } from "./constants/data";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import "./slick-custom.css";
+import DoneIcon from "@mui/icons-material/Done";
+import SearchIcon from "@mui/icons-material/Search";
+import PersonIcon from '@mui/icons-material/Person';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 
 const Home = () => {
+  const [activeItem, setActiveItem] = useState(0);
+  const sliderRef=useRef<Slider | null>(null);
+
+  var settings = {
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    vertical: false,
+  };
+  var settings2 = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    vertical: false,
+    initialSlide: activeItem,
+  };
+  const handleStateChange = (newStateValue: number) => {
+    // Update the activeItem state when your state changes
+    setActiveItem(newStateValue);
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(newStateValue);
+    }
+  };
+
   useEffect(() => {
     AOS.init({ duration: 3000 });
   });
+
   return (
-    <>
-      <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-[120vh]">
+    <div>
       <Navbar bgColor="#1d1b1a" textColor="white" />
-        <div className="flex flex-col lg:flex-row mb-[5rem] lg:mt-[5rem] relative z-[40]">
+      <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-[120vh]">
+        <div className="flex flex-col lg:flex-row mb-[10rem] lg:pt-[5rem] relative z-[40]">
           <div className="ml-[2rem] flex flex-col p-2 mt-4 lg:mt-[6rem] z-[5]">
             <p
               className="text-[1.4rem] lg:text-[1.3rem] tracking-[0.08em] lg:w-[30rem] text-white font-bold"
@@ -80,13 +127,15 @@ const Home = () => {
             </Carousel>
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col lg:flex-row pt-[5rem] lg:pt-[18rem]">
+      <div className="flex flex-col lg:flex-row pt-[5rem] lg:pt-[8rem] z-[30]">
+        <div className="flex flex-col lg:flex-row mb-[4rem]">
           <div className="justify-center items-center">
             <div className="w-fit m-auto">
               <img
                 src="/assets/images/hotelstarsicon.jpeg"
-                className="drop-shadow-2xl rounded-full absolute left-[17rem] md:left-[30rem] md:top-[150vh] lg:left-[17rem] lg:top-[140vh] w-[8rem] h-[8rem] m-[1rem] lg:ml-[2rem]"
+                className="drop-shadow-2xl rounded-full absolute left-[17rem] w-[8rem] h-[8rem] m-[1rem] lg:ml-[2rem]"
                 alt="hotel-star-icon"
                 data-aos="fade-right"
               />
@@ -101,7 +150,7 @@ const Home = () => {
                 alt="toilet2"
               />
               <div
-                className="absolute lg:left-[6rem] md:left-[12rem] top-[180vh] md:top-[190vh] left-[1rem] lg:top-[176vh] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white"
+                className="absolute lg:left-[6rem] md:left-[12rem] md:top-[190vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white"
                 data-aos="fade-up"
               >
                 <svg
@@ -120,62 +169,8 @@ const Home = () => {
             </div>
           </div>
 
-          
-        </div>
-
-      </div>
-    </>
-  );
-};
-
-export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div className="lg:ml-[10rem]">
-            <p className="text-[#ab6034] text-[1.2rem] m-[1rem]">
+          <div className="lg:ml-[10rem]">
+            <p className="text-[#ab6034] font-semibold text-[1.2rem] m-[1rem]">
               About Company
             </p>
             <h1 className="m-[1rem] text-[2.5rem] tracking-[.1em] font-semibold max-w-[40rem]">
@@ -227,8 +222,8 @@ export default Home;
             </div>
             <div className="flex lg:flex-row flex-col m-[1rem] p-[1rem] lg:justify-between justify-center items-center">
               <img
-                className="rounded-full w-[4rem] h-[4rem] mr-[2rem] m-[1rem]"
-                src={require("../../images/toilet3.jpg")}
+                className="rounded-full w-[4.5rem] h-[4.5rem] mr-[2rem] m-[1rem]"
+                src="/assets/images/toilet3.jpg"
                 alt="toilet3"
               />
               <div className="flex flex-col p-[1rem] relative lg:left-[-2rem] m-[1rem]">
@@ -239,8 +234,247 @@ export default Home;
               </div>
               <img
                 className="w-[18rem] h-[4rem] m-[1rem]"
-                src={require("../../images/toilet4.jpg")}
+                src="/assets/images/toilet4.jpg"
                 alt="toilet4"
               />
             </div>
-          </div> */}
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+  );
+};
+
+export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
