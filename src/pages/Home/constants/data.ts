@@ -66,3 +66,98 @@ export const facilities=[
       },
     
   ];
+
+export const suites=[
+    {
+        title: 'Superior Room',
+        subTitle: 'All our Rooms have big windows to help you take...',
+        price: 69,
+        image: 'toilet1.jpg'
+    },
+    {
+        title: 'Superior Room',
+        subTitle: 'All our Rooms have big windows to help you take...',
+        price: 69,
+        image: 'toilet1.jpg'
+    },
+    {
+        title: 'Superior Room',
+        subTitle: 'All our Rooms have big windows to help you take...',
+        price: 69,
+        image: 'toilet1.jpg'
+    },
+    {
+        title: 'Superior Room',
+        subTitle: 'All our Rooms have big windows to help you take...',
+        price: 69,
+        image: 'toilet1.jpg'
+    },
+    {
+        title: 'Superior Room',
+        subTitle: 'All our Rooms have big windows to help you take...',
+        price: 69,
+        image: 'toilet1.jpg'
+    },
+    {
+        title: 'Superior Room',
+        subTitle: 'All our Rooms have big windows to help you take...',
+        price: 69,
+        image: 'toilet1.jpg'
+    },
+]
+
+export const customers=[
+  {
+    id: 0,
+      content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
+      name: 'Robert Ravi Mishra',
+      profession: 'CEO & Founder',
+      image: 'toilet1.jpg'
+  },
+  {
+    id: 1,
+    content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
+    name: 'Robert Ravi Mishra',
+    profession: 'Web Developer',
+    image: 'toilet1.jpg'
+},
+{
+  id: 2,
+  content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
+  name: 'Robert Ravi Mishra',
+  profession: 'Software Developer',
+  image: 'toilet1.jpg'
+},
+{
+  id: 3,
+  content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
+  name: 'Robert Ravi Mishra',
+  profession: 'CEO & Founder',
+  image: 'toilet1.jpg'
+},
+]
+
+
+export const news=[
+  {
+    image: 'toilet1.jpg',
+    title: 'How To Create Dynamic Donut Charts With Tailwind',
+    subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...',
+    author: 'admin',
+    date: 'July 31, 2023',
+  },
+  {
+    image: 'toilet1.jpg',
+    title: 'How To Create Dynamic Donut Charts With Tailwind',
+    subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...',
+    author: 'admin',
+    date: 'July 31, 2023',
+  },
+  {
+    image: 'toilet1.jpg',
+    title: 'How To Create Dynamic Donut Charts With Tailwind',
+    subTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...',
+    author: 'admin',
+    date: 'July 31, 2023',
+  },
+]
