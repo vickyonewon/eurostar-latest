@@ -13,51 +13,12 @@ import DoneIcon from "@mui/icons-material/Done";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from '@mui/icons-material/Person';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import HomeController from "./home-controller";
+import Footer from "../../components/footer";
 
 
 const Home = () => {
-  const [activeItem, setActiveItem] = useState(0);
-  const sliderRef=useRef<Slider | null>(null);
-
-  var settings = {
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    infinite: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    vertical: false,
-  };
-  var settings2 = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    vertical: false,
-    initialSlide: activeItem,
-  };
-  const handleStateChange = (newStateValue: number) => {
-    // Update the activeItem state when your state changes
-    setActiveItem(newStateValue);
-    if (sliderRef.current) {
-      sliderRef.current.slickGoTo(newStateValue);
-    }
-  };
-
-  useEffect(() => {
-    AOS.init({ duration: 3000 });
-  });
-
+  const useHomeController=HomeController();
   return (
     <div>
       <Navbar bgColor="#1d1b1a" textColor="white" />
@@ -243,49 +204,197 @@ const Home = () => {
       </div>
 
       
+<div className="flex flex-col">
+        <div className="flex flex-col lg:flex-row justify-between mb-[1.5rem]">
+          <div className="text-[2.5rem] font-semibold w-[fit] lg:w-[30rem] ml-[2rem]">
+            Take A Look Our Luxury Rooms and Hotel
+          </div>
+          <div className="">
+            <button
+              data-aos="fade-up"
+              className="border-none bg-[#ab6034] text-[1.1rem] text-white w-fit py-4 px-6 mt-6 m-[2rem] hover:bg-[#1f1c1b] border-[4px] hover:border-white"
+            >
+              Explore Rooms {" >"}
+            </button>
+          </div>
+        </div>
+        {/* <div className="hidden lg:block lg:bg-[#1c1a19] lg:h-[25rem] lg:relative" /> */}
+        <div className="flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5]">
+          {rooms.map((room) => (
+            <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+              <img
+                className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
+                src={`/assets/images/${room.image}`}
+                alt="room"
+              />
+              <div className="flex flex-col p-[1rem]">
+                <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
+                  {room.title}
+                </h1>
+                <div className="flex flex-ro7">
+                  <div className="flex flex-row text-[1.15rem] text-gray-600 mr-[1.7rem] mb-[1rem]">
+                    {" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-person w-[2rem] h-[1.6rem] text-[#ab6034]"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                    </svg>
+                    Adults: {room.adults}
+                  </div>
+                  <div className="flex flex-row text-[1.15rem] text-gray-600 mr-[0.7rem] mb-[1rem]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-rulers w-[2rem] h-[1.3rem] text-[#ab6034]"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z" />
+                    </svg>
+                    Size: {room.size} ft2
+                  </div>
+                </div>
+                <p className="text-[1.15rem] text-gray-600 my-[0.7rem]">
+                  {room.subTitle}
+                </p>
+                <p className="text-[1.15rem] text-gray-600 my-[0.7rem]">
+                  From{" "}
+                  <span className="text-[1.7rem] font-bold text-[#ab6034]">
+                    ${room.price}
+                  </span>{" "}
+                  /per night
+                </p>
+              </div>
+              <button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
+                Book Now {" >"}
+              </button>
+            </div>
+          ))}
+        </div>
+        <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-fit z-[4]">
+          <div className="flex flex-wrap justify-center items-center lg:flex-row py-[2rem] pt-[8rem] relative ">
+            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
+              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
+                49 +
+              </div>
+              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
+                Luxury Hotels
+              </div>
+            </div>
+            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
+              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
+                49 +
+              </div>
+              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
+                Luxury Hotels
+              </div>
+            </div>
+            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
+              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
+                49 +
+              </div>
+              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
+                Luxury Hotels
+              </div>
+            </div>
+            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
+              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
+                49 +
+              </div>
+              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
+                Luxury Hotels
+              </div>
+            </div>
+          </div>
 
+          <div className="bg-[#1d1b1a] flex flex-wrap justify-center items-center p-[1rem] w-full mb-[3rem] relative ">
+            {facilities.map((fac) => (
+              <div className="flex flex-row p-[1rem] mb-[1rem]">
+                <div className=" text-white mb-[1rem] mr-[1.5rem]">
+                  {<fac.icon style={{ fontSize: "3rem" }} />}
+                </div>
+                <div className="flex flex-col">
+                  <div className="text-[1.5rem] text-white font-semibold">
+                    {fac.title}
+                  </div>
+                  <div className="text-[1.1rem] text-gray-400 w-[20rem] mt-[1rem]">
+                    {fac.content}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center items-center pt-[5rem] pb-[8rem]">
+        <h1
+          className="text-center text-[2.5rem] w-full lg:w-[40rem] font-medium m-[2.25rem] mb-[4rem]"
+          data-aos="fade-right"
+        >
+          Explore Luxury Hotel & Suites Are People Choosing
+        </h1>
+        <Slider
+          {...useHomeController.settings}
+          className="p-[2rem] w-[100%] pb-[4rem] lg:pl-[3rem]"
+        >
+          {suites.map((suite) => (
+            <div className="flex flex-col" data-aos="fade-up">
+              <div className="flex flex-col lg:flex-row">
+                <div className="w-full lg:w-6/12 bg-[#f4f2f1]">
+                  <div className="w-full flex flex-col p-[1rem]">
+                    <h1 className="text-[2.2rem] font-medium m-[1rem]">
+                      {suite.title}
+                    </h1>
+                    <p className="text-[1.1rem] text-gray-500 font-medium m-[1rem] mb-[3rem]">
+                      {suite.subTitle}
+                    </p>
+                    <p className="text-[1.1rem] text-gray-500 font-medium m-[1rem] mb-[1rem]">
+                      From{" "}
+                      <span className="text-[1.7rem] font-bold text-[#ab6034]">
+                        ${suite.price}
+                      </span>{" "}
+                      /per night
+                    </p>
+                    <button className="m-[1rem] w-[60%] font-medium hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.8rem] px-6 mt-6 border border-gray-400">
+                      Book Now {" >"}
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full lg:w-[18.5rem]">
+                  <img
+                    className="h-full"
+                    src={`/assets/images/${suite.image}`}
+                    alt="toilet"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className="w-[100%]">
+        <video
+          className="h-[110vh] w-[100%]"
+          src="/assets/kirtan.mp4"
+          poster="../assets/images/hotelimage.jpg"
+          controls
+        />
+      </div>
+
+      
     </div>
   );
 };
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

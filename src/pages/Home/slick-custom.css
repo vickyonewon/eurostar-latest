@@ -1,0 +1,22 @@
+
+.slick-dots{
+    width: fit-content;
+    margin: auto;
+}
+  .slick-dots li button {
+    border: none;
+    color: gray;
+    border-radius: 50%;
+    padding: auto;
+    cursor: pointer;
+  }
+  
+  .slick-dots li.slick-active button {
+    border: solid 1px brown;
+    padding: 0.6rem;
+  }
+
+  .slick-arrow{
+    display: none !important;
+  }
+
