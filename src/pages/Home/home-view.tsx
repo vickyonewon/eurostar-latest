@@ -8,17 +8,17 @@ import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import "./slick-custom.css";
+import "./home.css";
 import DoneIcon from "@mui/icons-material/Done";
 import SearchIcon from "@mui/icons-material/Search";
-import PersonIcon from '@mui/icons-material/Person';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import PersonIcon from "@mui/icons-material/Person";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import HomeController from "./home-controller";
 import Footer from "../../components/footer";
 
 
 const Home = () => {
-  const useHomeController=HomeController();
+  const useHomeController = HomeController();
   return (
     <div>
       <Navbar bgColor="#1d1b1a" textColor="white" />
@@ -203,10 +203,9 @@ const Home = () => {
         </div>
       </div>
 
-      
-<div className="flex flex-col">
+      <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row justify-between mb-[1.5rem]">
-          <div className="text-[2.5rem] font-semibold w-[fit] lg:w-[30rem] ml-[2rem]">
+          <div className="text-[2.5rem] font-medium w-[fit] lg:w-[30rem] ml-[2rem]">
             Take A Look Our Luxury Rooms and Hotel
           </div>
           <div className="">
@@ -219,7 +218,7 @@ const Home = () => {
           </div>
         </div>
         {/* <div className="hidden lg:block lg:bg-[#1c1a19] lg:h-[25rem] lg:relative" /> */}
-        <div className="flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5]">
+        <div className={`flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5] bg_gradient_sharp`}>
           {rooms.map((room) => (
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
               <img
@@ -389,12 +388,242 @@ const Home = () => {
         />
       </div>
 
+      <div className="flex flex-col lg:flex-row p-[2rem] pt-[8rem] pb-[8rem]">
+        <div className="flex flex-col w-full lg:w-5/12 p-[1rem]">
+          <p className="text-[1.1rem] font-semibold text-[#ab6034] m-[1rem]">
+            Food & Drink
+          </p>
+          <h1 className="text-[2.5rem] font-semibold ml-[1rem]">
+            Quality Food & Drink Your Trip Are Enjoyable
+          </h1>
+          <p className="text-[1rem] text-gray-500 m-[1rem]">
+            Sed ut perspiciatis unde omniste natus voluptatem accusantiume
+            doloremque laudantium, totam rem aperiam inventore
+          </p>
+          <div className="flex flex-row m-[1rem] mb-[0.4rem]">
+            <DoneIcon
+              className="text-[#ab6034] mr-[1rem]"
+              style={{ fontSize: "2rem" }}
+            />
+            <div className="flex flex-col">
+              <h1 className="text-[1.5rem]">Free breakfast, tea & coffee</h1>
+              <p className="text-[1rem] text-gray-500">
+                To take a trivial example, which undertakes laborious
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-row m-[1rem] mb-[0.4rem]">
+            <DoneIcon
+              className="text-[#ab6034] mr-[1rem]"
+              style={{ fontSize: "2rem" }}
+            />
+            <div className="flex flex-col">
+              <h1 className="text-[1.5rem]">Free breakfast, tea & coffee</h1>
+              <p className="text-[1rem] text-gray-500">
+                To take a trivial example, which undertakes laborious
+              </p>
+            </div>
+          </div>
+          <button className="text-[1.1rem] w-fit mt-[3rem] ml-[2rem] font-medium text-gray-600 p-[0.5rem] border-[1px] border-gray-400">
+            Learn More Us {" >"}
+          </button>
+        </div>
+        <div className="w-full lg:w-7/12">
+          <img
+            className="h-full"
+            src="/assets/images/home_restro.jpg"
+            alt="restro"
+          />
+          <div className="text-[1.4rem] w-fit relative bottom-[5rem] right-[1rem] p-[1rem] pt-[1.5rem] bg-[#ab6034] text-white">
+            <h1>Enjoy together</h1>
+            <p className="italic">Our Rooms</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row bg-[#1d1b1a] pt-[6rem] p-[2rem] pb-[6rem]">
+        <div className="flex flex-col bg-white w-full lg:w-5/12 p-[2rem] h-fit">
+          <p className="text-[1.2rem] text-[#ab6034] ml-[1rem]">
+            Booking Your Room
+          </p>
+          <h1 className="text-[2.3rem] m-[1rem]">Find & Booked Your Room</h1>
+          <div className="flex flex-row m-[1rem] mb-[1.5rem] justify-between border-gray-300 border-b-[1px]">
+            <label
+              htmlFor="checkin"
+              className="text-[1.2rem] m-[6px] h-fit text-left"
+            >
+              Check-in
+            </label>
+            <input
+              id="checkin"
+              type="date"
+              className=" p-[0.5rem]"
+              placeholder="Check-in"
+            />
+          </div>
+          <div className="flex flex-row m-[1rem] mb-[1.5rem] justify-between border-gray-300 border-b-[1px]">
+            <label
+              htmlFor="checkout"
+              className="text-[1.2rem] m-[6px] h-fit text-left"
+            >
+              Check-out
+            </label>
+            <input
+              id="checkout"
+              type="date"
+              className=" p-[0.5rem]"
+              placeholder="Check-out"
+            />
+          </div>
+          <div className="flex flex-row m-[1rem] mb-[1.5rem] justify-between border-gray-300 border-b-[1px]">
+            <label
+              htmlFor="adults"
+              className="text-[1.2rem] m-[6px] h-fit text-left"
+            >
+              Adults
+            </label>
+            <input
+              id="adults"
+              type="number"
+              className=" p-[0.5rem]"
+              placeholder="Adults"
+            />
+          </div>
+          <div className="flex flex-row m-[1rem] mb-[1.5rem] justify-between border-gray-300 border-b-[1px]">
+            <label
+              htmlFor="children"
+              className="text-[1.2rem] m-[6px] h-fit text-left"
+            >
+              Children
+            </label>
+            <input
+              id="children"
+              type="number"
+              className=" p-[0.5rem]"
+              placeholder="Children"
+            />
+          </div>
+          {/* <input type="date" className="w-full border-gray-300 border-b-[1px] p-[0.5rem] m-[1rem] mb-[1.5rem]" placeholder="Check-out" />
+          <input type="number" className="w-full border-gray-300 border-b-[1px] p-[0.5rem] m-[1rem] mb-[1.5rem] text-[1.3rem] font-black" placeholder="Adults" />
+          <input type="number" className="w-full border-gray-300 border-b-[1px] p-[0.5rem] m-[1rem] mb-[1.5rem] text-[1.3rem] font-black" placeholder="Children" /> */}
+          <button className="m-[1rem] w-[100%] text-white font-medium bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.9rem] px-6 mt-6 mb-[2rem] border border-gray-400">
+            Search Now{" "}
+            <SearchIcon style={{ fontSize: "1.5rem" }} className="ml-[1rem]" />
+          </button>
+        </div>
+
+        
+
+<div className="flex flex-col w-[100%] lg:w-[50rem] p-[2rem] lg:pl-[4rem]">
+          <p className="text-[1.3rem] font-medium text-[#ab6034] m-[1rem]">
+            Our Testimonials
+          </p>
+          <h1 className="text-[2.5rem] font-medium text-white m-[1rem] mb-[2rem]">
+            What Our Customer Say Us
+          </h1>
+
+          <div className="flex flex-col lg:flex-row">
+            <Slider
+              ref={useHomeController.sliderRef}
+              {...useHomeController.settings2}
+              className="w-full lg:w-[85%] h-fit pb-[2rem]"
+            >
+              {customers.map((cust) => (
+                <div className="flex flex-col p-[1rem] lg:p-[2rem] pt-[4rem] bg-[#0c0b0b] w-[100%] lg:w-fit m-[1rem] min-h-[20rem]">
+                  <p className="text-white ">{cust.content}</p>
+                  <div className="flex flex-col lg:flex-row mt-[2rem]">
+                    <img
+                      className="w-[3.4rem] h-[3.4rem] rounded-full mr-[1rem]"
+                      src={`/assets/images/${cust.image}`}
+                      alt="toilet"
+                    />
+                    <div className="flex flex-col">
+                      <h1 className="text-[1.5rem] text-white">{cust.name}</h1>
+                      <p className="text-[1.1rem] text-gray-300">
+                        {cust.profession}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+            <div className="flex flex-row lg:flex-col w-full lg:ml-[2rem] p-[0.6rem] pt-[2rem]">
+              {customers.map((cust) => (
+                <img
+                  key={cust.id}
+                  className={`w-[3.5rem] h-[3.5rem] rounded-full mb-[1rem] mr-[0.5rem] cursor-pointer ${
+                    cust.id === useHomeController.activeItem
+                      ? "border-[3px] border-[#ab6034]"
+                      : ""
+                  }`}
+                  src={`/assets/images/${cust.image}`}
+                  alt="toilet"
+                  onClick={() => useHomeController.handleStateChange(cust.id)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col pt-[7rem] pb-[5rem]">
+        <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]">
+          Stay With Us & Get More Updates Latest News & Blog
+        </h1>
+        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]">
+          {news.map((ne) => (
+            <div className="flex flex-col w-[95%] lg:w-[30rem] m-[1rem] bg-white">
+              <img
+                className="w-[95%] lg:w-full h-[18rem]"
+                src={`../assets/images/${ne.image}`}
+                alt="news"
+              />
+              <h1 className="text-[1.5rem] font-medium m-[1rem]">{ne.title}</h1>
+              <div className="flex flex-row m-[1rem]">
+                <p className="mr-[2rem]">
+                  <PersonIcon style={{ fontSize: "1.4rem" }} /> {ne.author}
+                </p>
+                <p>
+                  <CalendarMonthIcon style={{ fontSize: "1.3rem" }} /> {ne.date}
+                </p>
+              </div>
+              <p className="m-[1rem] text-gray-500 text-[1.1rem]">
+                {ne.subTitle}
+              </p>
+              <button className="m-[1rem] text-[1.1rem] hover:text-[#ab6034] font-semibold text-left text-gray-600">
+                View Post {" >"}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
       
     </div>
   );
 };
 
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

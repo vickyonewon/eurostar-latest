@@ -20,3 +20,11 @@
     display: none !important;
   }
 
+
+  @media screen and (min-width: 1000px){
+    .bg_gradient_sharp{
+      background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 45.2%, #1d1b1a 30%, #1d1b1a 100%);
+    }  
+  }
+
+  
