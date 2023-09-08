@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import { Link, } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-// import 'aos/dist/aos.css';
-import NavbarController from './navbar-controller';
+import useNavbarController from './navbar-controller';
 
 interface props{
   textColor: string,
@@ -11,10 +8,10 @@ interface props{
 
 
 const Navbar = () => {
-  const useNavbarController=NavbarController();
+  const navbarController=useNavbarController();
 
   return (
-    <nav className={`sticky top-0 z-[1000] bg-[${useNavbarController.color}]`}>
+    <nav className={`sticky top-0 z-[1000] bg-[${navbarController.color}]`}>
       <div className="container mx-auto">
         <div className="flex items-center py-3">
           <Link className="navbar-brand mr-10" to="/">
@@ -22,7 +19,7 @@ const Navbar = () => {
           </Link>
           <button
             className="lg:hidden mx-4 text-white absolute right-2"
-            onClick={useNavbarController.toggleMenu}
+            onClick={navbarController.toggleMenu}
             aria-label="Toggle navigation"
           >
             <svg
@@ -32,7 +29,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {useNavbarController.isOpen ? (
+              {navbarController.isOpen ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -49,11 +46,11 @@ const Navbar = () => {
               )}
             </svg>
           </button>
-          <div className={`lg:flex justify-between lg:space-x-8 ${useNavbarController.isOpen ? 'block' : 'hidden'}`}>
+          <div className={`lg:flex justify-between lg:space-x-8 ${navbarController.isOpen ? 'block' : 'hidden'}`}>
           <div className="flex flex-col lg:flex-row space-x-10 justify-center items-center">
               <Link
                 className={`nav-link text-[1.3rem] hover:text-[#a45c32] ${
-                  useNavbarController.isRouteActive('/') ? 'text-[#a45c32]' : `text-${useNavbarController.color=='#f4f2f1'? 'black': 'white'}`
+                  navbarController.isRouteActive('/') ? 'text-[#a45c32]' : `text-${navbarController.color=='#f4f2f1'? 'black': 'white'}`
                 }`}
                 to="/"
               >
@@ -61,7 +58,7 @@ const Navbar = () => {
               </Link>
               <Link
                 className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32] ${
-                  useNavbarController.isRouteActive('/about') ? 'text-[#a45c32]' : `text-${useNavbarController.color=='#f4f2f1'? 'black': 'white'}`
+                  navbarController.isRouteActive('/about') ? 'text-[#a45c32]' : `text-${navbarController.color=='#f4f2f1'? 'black': 'white'}`
                 }`}
                 to="/about"
               >
@@ -70,7 +67,7 @@ const Navbar = () => {
               <div className="relative group">
                 <Link
                   className={`nav-link text-[1.3rem] hover:text-[#a45c32] ${
-                    useNavbarController.isRouteActive('/rooms') ? 'text-[#a45c32]' : `text-${useNavbarController.color=='#f4f2f1'? 'black': 'white'}`
+                    navbarController.isRouteActive('/rooms') ? 'text-[#a45c32]' : `text-${navbarController.color=='#f4f2f1'? 'black': 'white'}`
                   }`}
                   to="#"
                 >
@@ -99,10 +96,10 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <Link className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32] ${useNavbarController.isRouteActive('/reviews') ? 'text-[#a45c32]' : `text-${useNavbarController.color=='#f4f2f1'? 'black': 'white'}`}`} target='_blank' to="https://www.tripadvisor.in/Hotel_Review-g297647-d2041217-Reviews-EuroStar_Inn-Khajuraho_Chhatarpur_District_Madhya_Pradesh.html">
+            <Link className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32] ${navbarController.isRouteActive('/reviews') ? 'text-[#a45c32]' : `text-${navbarController.color=='#f4f2f1'? 'black': 'white'}`}`} target='_blank' to="https://www.tripadvisor.in/Hotel_Review-g297647-d2041217-Reviews-EuroStar_Inn-Khajuraho_Chhatarpur_District_Madhya_Pradesh.html">
               Review Us
             </Link>
-            <Link className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32]  ${useNavbarController.isRouteActive('/contact-us') ? 'text-[#a45c32]' : `text-${useNavbarController.color=='#f4f2f1'? 'black': 'white'}`}`} to="/contact-us">
+            <Link className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32]  ${navbarController.isRouteActive('/contact-us') ? 'text-[#a45c32]' : `text-${navbarController.color=='#f4f2f1'? 'black': 'white'}`}`} to="/contact-us">
               Contact
             </Link>
             <button className='border-none bg-[#ab6034] lg:hidden m-2 text-[1.1rem] text-white w-40 h-12 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>

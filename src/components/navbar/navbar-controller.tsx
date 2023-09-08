@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 function NavbarController(){
     const [isOpen, setIsOpen] = useState(false);
     const location=useLocation();
-  
+
     const toggleMenu = () => {
       setIsOpen((prev)=> !prev);
     };
