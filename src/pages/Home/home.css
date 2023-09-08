@@ -5,14 +5,14 @@
 }
   .slick-dots li button {
     border: none;
-    color: gray;
+    color: gray !important;
     border-radius: 50%;
     padding: auto;
     cursor: pointer;
   }
   
   .slick-dots li.slick-active button {
-    border: solid 1px brown;
+    border: solid 2px brown;
     padding: 0.6rem;
   }
 

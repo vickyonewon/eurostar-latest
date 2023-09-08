@@ -17,12 +17,9 @@ import HomeController from "./home-controller";
 import Footer from "../../components/footer";
 
 
-const Home = () => {
-  const useHomeController = HomeController();
-  return (
-    <div>
-      <Navbar bgColor="#1d1b1a" textColor="white" />
-      <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-[120vh]">
+
+const Top=()=>(
+  <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-[120vh]">
         <div className="flex flex-col lg:flex-row mb-[10rem] lg:pt-[5rem] relative z-[40]">
           <div className="ml-[2rem] flex flex-col p-2 mt-4 lg:mt-[6rem] z-[5]">
             <p
@@ -67,14 +64,14 @@ const Home = () => {
               <div className="justify-center items-center">
                 <img
                   className="lg:h-[28rem] h-[24rem] w-[50rem]"
-                  src="/assets/images/gallery.jpg"
+                  src="/assets/images/front2.jpg"
                   alt="gallery"
                 />
               </div>
               <div>
                 <img
                   className="lg:h-[28rem] h-[24rem] w-[50rem]"
-                  src="/assets/images/home_restro.jpg"
+                  src="/assets/images/garden.jpg"
                   alt="restro"
                 />
               </div>
@@ -89,8 +86,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+)
 
-      <div className="flex flex-col lg:flex-row pt-[5rem] lg:pt-[8rem] z-[30]">
+const BriefSummary=()=>(
+  <div>
+    <div className="flex flex-col lg:flex-row pt-[5rem] lg:pt-[8rem] z-[30]">
         <div className="flex flex-col lg:flex-row mb-[4rem]">
           <div className="justify-center items-center">
             <div className="w-fit m-auto">
@@ -219,8 +219,8 @@ const Home = () => {
         </div>
         {/* <div className="hidden lg:block lg:bg-[#1c1a19] lg:h-[25rem] lg:relative" /> */}
         <div className={`flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5] bg_gradient_sharp`}>
-          {rooms.map((room) => (
-            <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+          {rooms.map((room, index) => (
+            <div key={index} className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
               <img
                 className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
                 src={`/assets/images/${room.image}`}
@@ -313,8 +313,8 @@ const Home = () => {
           </div>
 
           <div className="bg-[#1d1b1a] flex flex-wrap justify-center items-center p-[1rem] w-full mb-[3rem] relative ">
-            {facilities.map((fac) => (
-              <div className="flex flex-row p-[1rem] mb-[1rem]">
+            {facilities.map((fac, index) => (
+              <div key={index} className="flex flex-row p-[1rem] mb-[1rem]">
                 <div className=" text-white mb-[1rem] mr-[1.5rem]">
                   {<fac.icon style={{ fontSize: "3rem" }} />}
                 </div>
@@ -331,8 +331,14 @@ const Home = () => {
           </div>
         </div>
       </div>
+  </div>
+)
 
-      <div className="flex flex-col justify-center items-center pt-[5rem] pb-[8rem]">
+const QualityShow=()=>{
+  const useHomeController=HomeController();
+  return (
+  <div>
+    <div className="flex flex-col justify-center items-center pt-[5rem] pb-[8rem]">
         <h1
           className="text-center text-[2.5rem] w-full lg:w-[40rem] font-medium m-[2.25rem] mb-[4rem]"
           data-aos="fade-right"
@@ -343,8 +349,8 @@ const Home = () => {
           {...useHomeController.settings}
           className="p-[2rem] w-[100%] pb-[4rem] lg:pl-[3rem]"
         >
-          {suites.map((suite) => (
-            <div className="flex flex-col" data-aos="fade-up">
+          {suites.map((suite, index) => (
+            <div key={index} className="flex flex-col" data-aos="fade-up">
               <div className="flex flex-col lg:flex-row">
                 <div className="w-full lg:w-6/12 bg-[#f4f2f1]">
                   <div className="w-full flex flex-col p-[1rem]">
@@ -370,7 +376,7 @@ const Home = () => {
                   <img
                     className="h-full"
                     src={`/assets/images/${suite.image}`}
-                    alt="toilet"
+                    alt="restaurant"
                   />
                 </div>
               </div>
@@ -383,7 +389,7 @@ const Home = () => {
         <video
           className="h-[110vh] w-[100%]"
           src="/assets/kirtan.mp4"
-          poster="../assets/images/hotelimage.jpg"
+          poster="../assets/images/front1.jpg"
           controls
         />
       </div>
@@ -431,7 +437,7 @@ const Home = () => {
         <div className="w-full lg:w-7/12">
           <img
             className="h-full"
-            src="/assets/images/home_restro.jpg"
+            src="/assets/images/restaurant1.jpg"
             alt="restro"
           />
           <div className="text-[1.4rem] w-fit relative bottom-[5rem] right-[1rem] p-[1rem] pt-[1.5rem] bg-[#ab6034] text-white">
@@ -440,9 +446,15 @@ const Home = () => {
           </div>
         </div>
       </div>
+  </div>
+ )
+}
 
-      <div className="flex flex-col lg:flex-row bg-[#1d1b1a] pt-[6rem] p-[2rem] pb-[6rem]">
-        <div className="flex flex-col bg-white w-full lg:w-5/12 p-[2rem] h-fit">
+const BookRoom=()=>{
+  const useHomeController = HomeController();
+ return (
+  <div className="flex flex-col lg:flex-row bg-[#1d1b1a] pt-[6rem] p-[2rem] pb-[6rem]">
+      <div className="flex flex-col bg-white w-full lg:w-5/12 p-[2rem] h-fit duration-100" data-aos="fade-up">
           <p className="text-[1.2rem] text-[#ab6034] ml-[1rem]">
             Booking Your Room
           </p>
@@ -528,8 +540,8 @@ const Home = () => {
               {...useHomeController.settings2}
               className="w-full lg:w-[85%] h-fit pb-[2rem]"
             >
-              {customers.map((cust) => (
-                <div className="flex flex-col p-[1rem] lg:p-[2rem] pt-[4rem] bg-[#0c0b0b] w-[100%] lg:w-fit m-[1rem] min-h-[20rem]">
+              {customers.map((cust, index) => (
+                <div key={index} className="flex flex-col p-[1rem] lg:p-[2rem] pt-[4rem] bg-[#0c0b0b] w-[100%] lg:w-fit m-[1rem] min-h-[20rem]">
                   <p className="text-white ">{cust.content}</p>
                   <div className="flex flex-col lg:flex-row mt-[2rem]">
                     <img
@@ -565,14 +577,18 @@ const Home = () => {
           </div>
         </div>
       </div>
+)
+}
 
-      <div className="flex flex-col pt-[7rem] pb-[5rem]">
-        <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]">
+const News=()=>(
+  <div>
+     <div className="flex flex-col pt-[7rem] pb-[5rem]">
+        <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]" data-aos="fade-right">
           Stay With Us & Get More Updates Latest News & Blog
         </h1>
-        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]">
-          {news.map((ne) => (
-            <div className="flex flex-col w-[95%] lg:w-[30rem] m-[1rem] bg-white">
+        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]" data-aos="fade-left">
+          {news.map((ne, index) => (
+            <div key={index} className="flex flex-col w-[95%] lg:w-[30rem] m-[1rem] bg-white">
               <img
                 className="w-[95%] lg:w-full h-[18rem]"
                 src={`../assets/images/${ne.image}`}
@@ -597,7 +613,18 @@ const Home = () => {
           ))}
         </div>
       </div>
-      
+  </div>
+)
+
+const Home = () => {
+  return (
+    <div>
+      <Navbar />
+      <Top />
+      <BriefSummary />
+      <QualityShow />
+      <BookRoom />
+      <News />
     </div>
   );
 };

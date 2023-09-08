@@ -13,11 +13,12 @@ function NavbarController(){
     const isRouteActive = (path: any) => {
       return location.pathname === path;
     }
+    const color=location.pathname==='/'? "#1d1b1a": "#f4f2f1";
     useEffect(()=>{
       AOS.init({duration: 3000});
     })
 
-    return {isRouteActive, isOpen, toggleMenu};
+    return {isRouteActive, isOpen, toggleMenu, color};
 }
 
 export default NavbarController;

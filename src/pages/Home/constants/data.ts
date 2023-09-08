@@ -72,37 +72,37 @@ export const suites=[
         title: 'Superior Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'toilet1.jpg'
+        image: 'restaurant1.jpg'
     },
     {
         title: 'Superior Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'toilet1.jpg'
+        image: 'restaurant1.jpg'
     },
     {
         title: 'Superior Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'toilet1.jpg'
+        image: 'restaurant1.jpg'
     },
     {
         title: 'Superior Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'toilet1.jpg'
+        image: 'restaurant1.jpg'
     },
     {
         title: 'Superior Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'toilet1.jpg'
+        image: 'restaurant1.jpg'
     },
     {
         title: 'Superior Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'toilet1.jpg'
+        image: 'restaurant1.jpg'
     },
 ]
 
@@ -161,3 +161,4 @@ export const news=[
     date: 'July 31, 2023',
   },
 ]
+

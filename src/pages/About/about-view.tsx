@@ -8,7 +8,7 @@ import Footer from "../../components/footer";
 const About: React.FC = () => {
   return (
     <div>
-      <Navbar bgColor="#f4f2f1" textColor="black" />
+      <Navbar />
       <div className="bg-gray-100">
         <div
           className="text-center bg-cover bg-center bg-no-repeat h-96 flex md:flex-col flex-row justify-center items-center text-gray-800"
@@ -51,7 +51,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 };

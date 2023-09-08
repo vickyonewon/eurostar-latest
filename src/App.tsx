@@ -7,7 +7,6 @@ import Rooms from './pages/Rooms/rooms-view';
 import Contact from './pages/Contact/contact-view';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import Footer from './components/footer';
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/rooms' element={<Rooms />} />
+        <Route path='/rooms/:id' element={<Rooms />} />
         <Route path='/contact-us' element={<Contact />} />
       </Routes>
       </BrowserRouter>

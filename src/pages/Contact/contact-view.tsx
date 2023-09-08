@@ -6,7 +6,7 @@ import Navbar from '../../components/navbar/navbar-view';
 const Contact = () => {
   return (
     <div>
-      <Navbar bgColor='#1d1b1a' textColor='white' />
+      <Navbar />
       Contact</div>
   )
 }
