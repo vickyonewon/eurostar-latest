@@ -111,7 +111,7 @@ const BriefSummary=()=>(
                 alt="toilet2"
               />
               <div
-                className="absolute lg:left-[6rem] md:left-[12rem] md:top-[190vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white"
+                className="absolute lg:left-[6rem] md:left-[12rem] top-[190vh] md:top-[190vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white"
                 data-aos="fade-up"
               >
                 <svg

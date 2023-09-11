@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function NavbarController(){
+function useNavbarController(){
     const [isOpen, setIsOpen] = useState(false);
     const location=useLocation();
 
@@ -21,4 +21,4 @@ function NavbarController(){
     return {isRouteActive, isOpen, toggleMenu, color};
 }
 
-export default NavbarController;
+export default useNavbarController;

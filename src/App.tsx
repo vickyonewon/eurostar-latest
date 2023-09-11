@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/home-view';
-import About from './pages/About/about-view';
-import Rooms from './pages/Rooms/rooms-view';
-import Contact from './pages/Contact/contact-view';
+import Home from './pages/Home/index';
+import About from './pages/About/index';
+import Rooms from './pages/Rooms/index';
+import RoomDetails from './pages/RoomDetails/index';
+import Contact from './pages/Contact/index';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import store from './redux/store';
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/rooms/:id' element={<Rooms />} />
+        <Route path='/rooms' element={<Rooms />} />
+        <Route path='/rooms/:roomId' element={<RoomDetails />} />
         <Route path='/contact-us' element={<Contact />} />
       </Routes>
       </BrowserRouter>

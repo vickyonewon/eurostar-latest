@@ -69,7 +69,7 @@ const Navbar = () => {
                   className={`nav-link text-[1.3rem] hover:text-[#a45c32] ${
                     navbarController.isRouteActive('/rooms') ? 'text-[#a45c32]' : `text-${navbarController.color=='#f4f2f1'? 'black': 'white'}`
                   }`}
-                  to="#"
+                  to="/rooms"
                 >
                   Rooms
                 </Link>
