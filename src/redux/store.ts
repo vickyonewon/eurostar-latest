@@ -1,9 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit';
-import counterReducer from './features/counterSlice';
+import roomReducer from './features/roomsSlice';
 
-export const store=configureStore({
+const store=configureStore({
     reducer: {
-        counter: counterReducer,
+        rooms: roomReducer
     }
 })
 
+export default store;
