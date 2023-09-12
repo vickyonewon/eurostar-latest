@@ -140,7 +140,7 @@ const Rooms = () => {
                 <p className="text-[1.15rem] text-gray-600 my-[0.7rem]">
                   From{" "}
                   <span className="text-[1.7rem] font-bold text-[#ab6034]">
-                    $49
+                    ₹49
                   </span>{" "}
                   /per night
                 </p>

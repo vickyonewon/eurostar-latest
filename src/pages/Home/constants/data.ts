@@ -8,6 +8,7 @@ import AddRoadIcon from '@mui/icons-material/AddRoad';
 
 export const rooms = [
     {
+      id: 'executive',
       image: "executive1.jpg",
       title: "Executive Rooms",
       adults: 2,
@@ -16,6 +17,7 @@ export const rooms = [
       price: 49,
     },
     {
+      id: 'luxury',
       image: "luxury1.jpg",
       title: "Luxury Rooms",
       adults: 2,
@@ -24,6 +26,7 @@ export const rooms = [
       price: 49,
     },
     {
+      id: 'deluxe',
       image: "deluxe1.jpg",
       title: "Deluxe Rooms",
       adults: 2,

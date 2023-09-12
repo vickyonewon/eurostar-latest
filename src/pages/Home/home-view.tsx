@@ -15,6 +15,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import HomeController from "./home-controller";
 import Footer from "../../components/footer";
+import { Link } from "react-router-dom";
 
 
 const Top=()=>(
@@ -62,7 +63,7 @@ const Top=()=>(
             >
               <div className="justify-center items-center">
                 <img
-                  className="lg:h-[28rem] h-[24rem] w-[50rem]"
+                  className="lg:h-[28rem] h-[25rem] w-[50rem]"
                   src="/assets/images/front2.jpg"
                   alt="gallery"
                 />
@@ -218,13 +219,15 @@ const BriefSummary=()=>(
         </div>
         {/* <div className="hidden lg:block lg:bg-[#1c1a19] lg:h-[25rem] lg:relative" /> */}
         <div className={`flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5] bg_gradient_sharp`}>
-          {rooms.map((room, index) => (
-            <div key={index} className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+          {rooms.map((room) => (
+            <div key={room.id} className="w-fit lg:w-[29rem] m-[0.8rem] bg-white overflow-hidden">
+              <Link to={`/rooms/${room.id}`}>
               <img
-                className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
+                className="w-[100%] h-[18rem] cursor-pointer duration-1000 hover:scale-110"
                 src={`/assets/images/${room.image}`}
                 alt="room"
               />
+              </Link>
               <div className="flex flex-col p-[1rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   {room.title}
@@ -264,7 +267,7 @@ const BriefSummary=()=>(
                 <p className="text-[1.15rem] text-gray-600 my-[0.7rem]">
                   From{" "}
                   <span className="text-[1.7rem] font-bold text-[#ab6034]">
-                    ${room.price}
+                    ₹{room.price}
                   </span>{" "}
                   /per night
                 </p>
@@ -362,7 +365,7 @@ const QualityShow=()=>{
                     <p className="text-[1.1rem] text-gray-500 font-medium m-[1rem] mb-[1rem]">
                       From{" "}
                       <span className="text-[1.7rem] font-bold text-[#ab6034]">
-                        ${suite.price}
+                        ₹{suite.price}
                       </span>{" "}
                       /per night
                     </p>

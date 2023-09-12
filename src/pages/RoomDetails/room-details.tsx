@@ -111,7 +111,7 @@ const RoomDetails = () => {
           From{" "}
           <span className="text-[#ab6034] text-[1.8rem] font-semibold">
             {" "}
-            $ 49 / NIGHT
+            ₹ 49 / NIGHT
           </span>
         </p>
       </div>
