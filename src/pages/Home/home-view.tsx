@@ -17,7 +17,6 @@ import HomeController from "./home-controller";
 import Footer from "../../components/footer";
 
 
-
 const Top=()=>(
   <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-[120vh]">
         <div className="flex flex-col lg:flex-row mb-[10rem] lg:pt-[5rem] relative z-[40]">

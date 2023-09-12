@@ -1,7 +1,9 @@
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import BedIcon from '@mui/icons-material/Bed';
 import ParkIcon from '@mui/icons-material/Park';
-import PoolIcon from '@mui/icons-material/Pool';
+import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
+import SpaIcon from '@mui/icons-material/Spa';
+
 
 export const enjoyList=[
     {
@@ -12,9 +14,9 @@ export const enjoyList=[
     },
     {
       id: 2,
-      image: PoolIcon,
-      title: 'Swimming Pool',
-      content: `Dive into Tranquility: Refresh and Recharge at Our Inviting Hotel Swimming Pool.`,
+      image: SelfImprovementIcon,
+      title: 'Yoga Center',
+      content: `Dive into Tranquility: Refresh and Recharge at Our Inviting Yoga Facilities.`,
     },
     {
       id: 3,
@@ -24,9 +26,9 @@ export const enjoyList=[
     },
     {
       id: 4,
-      image: ParkIcon,
-      title: 'Playing Park',
-      content: `Unleash Fun and Adventure: Enjoy Boundless Joy in Our Exciting and Safe Playing Park.`,
+      image: SpaIcon,
+      title: 'Massage Hub',
+      content: `Unleash Fun and Adventure: Enjoy Boundless Joy in Our Exciting and Safe Massage Hub.`,
     },
   ];
   

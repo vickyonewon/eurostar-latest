@@ -90,41 +90,17 @@ const Rooms = () => {
         </button>
       </div>
 
-      <div className="flex flex-row justify-end px-[2rem]">
-        <div className="flex flex-row gap-[1.3rem]">
-          <button onClick={() => roomController.handleLargeWidth(3)}>
-            <img
-              src="/assets/images/3x3grid.png"
-              className="w-[2rem] h-[2rem]"
-              alt="3x3"
-            />
-          </button>
-          <button onClick={() => roomController.handleLargeWidth(2)}>
-            <img
-              src="/assets/images/2x2grid.png"
-              className="w-[2rem] h-[2rem]"
-              alt="2x2"
-            />
-          </button>
-          <button onClick={() => roomController.handleLargeWidth(1)}>
-            <img
-              src="/assets/images/1x1grid.png"
-              className="w-[2rem] h-[2rem]"
-              alt="1x1"
-            />
-          </button>
-        </div>
-      </div>
-
       <div
         className={`flex flex-wrap justify-center items-center p-[1.5rem] pt-[5rem] bg-[#f4f4f4] room-grid grid-cols-${roomController.largeWidth}`}
       >
         <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+              <Link to='/rooms/standard'>
               <img
                 className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
                 src={`/assets/images/standard1.jpg`}
                 alt="room"
               />
+              </Link>
               <div className="flex flex-col p-[1rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   Standard Room
@@ -174,11 +150,13 @@ const Rooms = () => {
               </button>
             </div>
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+            <Link to='/rooms/luxury'>
               <img
                 className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
                 src={`/assets/images/luxury1.jpg`}
                 alt="room"
               />
+              </Link>
               <div className="flex flex-col p-[1rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   Luxury Room
@@ -228,11 +206,13 @@ const Rooms = () => {
               </button>
             </div>
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+            <Link to='/rooms/deluxe'>
               <img
                 className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
                 src={`/assets/images/deluxe1.jpg`}
                 alt="room"
               />
+              </Link>
               <div className="flex flex-col p-[1rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   Deluxe Room
@@ -282,11 +262,13 @@ const Rooms = () => {
               </button>
             </div>
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
+            <Link to='/rooms/executive'>
               <img
                 className="w-[100%] h-[18rem] cursor-pointer hover:scale-105"
                 src={`/assets/images/executive1.jpg`}
                 alt="room"
               />
+              </Link>
               <div className="flex flex-col p-[1rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   Executive Room

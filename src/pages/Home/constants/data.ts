@@ -8,24 +8,24 @@ import AddRoadIcon from '@mui/icons-material/AddRoad';
 
 export const rooms = [
     {
-      image: "classicroom.jpg",
-      title: "Classic Single Room",
+      image: "executive1.jpg",
+      title: "Executive Rooms",
       adults: 2,
       size: 410,
       subTitle: "All our Room have big windows to help you take a broad..",
       price: 49,
     },
     {
-      image: "classicroom.jpg",
-      title: "Couple Room",
+      image: "luxury1.jpg",
+      title: "Luxury Rooms",
       adults: 2,
       size: 410,
       subTitle: "All our Room have big windows to help you take a broad..",
       price: 49,
     },
     {
-      image: "classicroom.jpg",
-      title: "Deluxe Suite Room",
+      image: "deluxe1.jpg",
+      title: "Deluxe Rooms",
       adults: 2,
       size: 410,
       subTitle: "All our Room have big windows to help you take a broad..",

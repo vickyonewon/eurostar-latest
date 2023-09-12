@@ -11,8 +11,17 @@ import CircleIcon from "@mui/icons-material/Circle";
 import { useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 import moment from "moment";
 import { useParams } from "react-router-dom";
+import {
+  deluxeRooms,
+  executiveRooms,
+  luxuryRooms,
+  standardRooms,
+} from "./constants/data";
+
 
 const localizer = momentLocalizer(moment);
 
@@ -62,10 +71,22 @@ const RoomDetails = () => {
   const [inquiryExtraInfo, setInquiryExtraInfo] = useState<any>("");
   const [activeButton, setActiveButton] = useState("booking");
 
-  let rooms=useSelector((state: any) => state.rooms);
-  console.log('rooms=> ', rooms);
+  let rooms: any[]=[]; 
 
   const { roomId } = useParams();
+  switch(roomId){
+    case 'executive':
+      rooms=executiveRooms;
+      break;
+    case 'luxury':
+      rooms=luxuryRooms;
+      break;
+    case 'standard':
+      rooms=standardRooms;
+      break;
+    case 'deluxe':
+      rooms=deluxeRooms;
+  }
 
   const handleStarClick = (starValue: any) => {
     setRating(starValue);
@@ -85,7 +106,7 @@ const RoomDetails = () => {
         <span className="text-[#c59172] font-semibold">{standardText}</span>
       </div>
       <div className="flex flex-row justify-between pt-[4rem] px-[3rem] py-[1rem]">
-        <h1 className="text-[3rem] font-bold">{standardText}</h1>
+        <h1 className="text-[3rem] font-bold">{standardText} Rooms</h1>
         <p className="text-[1.4rem] text-gray-500">
           From{" "}
           <span className="text-[#ab6034] text-[1.8rem] font-semibold">
@@ -117,9 +138,19 @@ const RoomDetails = () => {
           Children: { 2}
         </div>
       </div>
-      <div className="py-[2rem]">
+      <div className="py-[2rem] w-[95%] m-auto">
         {
-          
+          <Carousel
+          interval={4000}
+          autoPlay={true}
+          infiniteLoop={true}
+          showThumbs={false}
+          className=""
+        >
+          {rooms.map((room: any)=>(
+            <img src={`/assets/images/${room.image}`} alt='room' className='h-[80vh]' />
+          ))}
+        </Carousel>
         }
       </div>
 
