@@ -72,41 +72,29 @@ export const facilities=[
 
 export const suites=[
     {
-        title: 'Superior Room',
+        title: 'Executive Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'restaurant1.jpg'
+        image: 'executive2.jpg'
     },
     {
-        title: 'Superior Room',
+        title: 'Deluxe Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'restaurant1.jpg'
+        image: 'deluxe2.jpg'
     },
     {
-        title: 'Superior Room',
+        title: 'Luxury Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'restaurant1.jpg'
+        image: 'luxury2.jpg'
     },
     {
-        title: 'Superior Room',
+        title: 'Standard Room',
         subTitle: 'All our Rooms have big windows to help you take...',
         price: 69,
-        image: 'restaurant1.jpg'
-    },
-    {
-        title: 'Superior Room',
-        subTitle: 'All our Rooms have big windows to help you take...',
-        price: 69,
-        image: 'restaurant1.jpg'
-    },
-    {
-        title: 'Superior Room',
-        subTitle: 'All our Rooms have big windows to help you take...',
-        price: 69,
-        image: 'restaurant1.jpg'
-    },
+        image: 'standard2.jpg'
+    }
 ]
 
 export const customers=[

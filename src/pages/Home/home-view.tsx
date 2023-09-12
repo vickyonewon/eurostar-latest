@@ -220,19 +220,21 @@ const BriefSummary=()=>(
         {/* <div className="hidden lg:block lg:bg-[#1c1a19] lg:h-[25rem] lg:relative" /> */}
         <div className={`flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5] bg_gradient_sharp`}>
           {rooms.map((room) => (
-            <div key={room.id} className="w-fit lg:w-[29rem] m-[0.8rem] bg-white overflow-hidden">
+            <div key={room.id} className="group w-fit lg:w-[29rem] m-[0.8rem] bg-white overflow-hidden">
+              <div className="overflow-hidden">
               <Link to={`/rooms/${room.id}`}>
               <img
-                className="w-[100%] h-[18rem] cursor-pointer duration-1000 hover:scale-110"
+                className="w-[100%] h-[18rem] cursor-pointer duration-[3000ms] group-hover:scale-125"
                 src={`/assets/images/${room.image}`}
                 alt="room"
               />
               </Link>
+              </div>
               <div className="flex flex-col p-[1rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   {room.title}
                 </h1>
-                <div className="flex flex-ro7">
+                <div className="flex flex-row">
                   <div className="flex flex-row text-[1.15rem] text-gray-600 mr-[1.7rem] mb-[1rem]">
                     {" "}
                     <svg
@@ -272,7 +274,7 @@ const BriefSummary=()=>(
                   /per night
                 </p>
               </div>
-              <button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
+              <button className="border-none w-[100%] font-bold bg-[#eeeceb] group-hover:bg-[#ab6034] group-hover:text-white text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
                 Book Now {" >"}
               </button>
             </div>
@@ -355,7 +357,7 @@ const QualityShow=()=>{
             <div key={index} className="flex flex-col" data-aos="fade-up">
               <div className="flex flex-col lg:flex-row">
                 <div className="w-full lg:w-6/12 bg-[#f4f2f1]">
-                  <div className="w-full flex flex-col p-[1rem]">
+                  <div className="w-full flex flex-col p-[1rem] group">
                     <h1 className="text-[2.2rem] font-medium m-[1rem]">
                       {suite.title}
                     </h1>
@@ -369,16 +371,16 @@ const QualityShow=()=>{
                       </span>{" "}
                       /per night
                     </p>
-                    <button className="m-[1rem] w-[60%] font-medium hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.8rem] px-6 mt-6 border border-gray-400">
+                    <button className="m-[1rem] w-[60%] font-medium hover:bg-[#ab6034] group-hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white group-hover:text-white py-[0.8rem] px-6 mt-6 border border-gray-400">
                       Book Now {" >"}
                     </button>
                   </div>
                 </div>
                 <div className="w-full lg:w-[18.5rem]">
                   <img
-                    className="h-full"
+                    className="h-[25rem] w-full"
                     src={`/assets/images/${suite.image}`}
-                    alt="restaurant"
+                    alt="rooms slides"
                   />
                 </div>
               </div>
@@ -588,15 +590,17 @@ const News=()=>(
         <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]" data-aos="fade-right">
           Stay With Us & Get More Updates Latest News & Blog
         </h1>
-        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]" data-aos="fade-left">
+        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]" data-aos="fade-right">
           {news.map((ne, index) => (
-            <div key={index} className="flex flex-col w-[95%] lg:w-[30rem] m-[1rem] bg-white">
+            <div key={index} className="relative overflow-hidden group flex flex-col w-[96%] lg:w-[30rem] m-[1rem] bg-white border hover:border-b-4 hover:border-b-[#ab6034]">
+              <div className="relative overflow-hidden">
               <img
-                className="w-[95%] lg:w-full h-[18rem]"
+                className="w-[95%] lg:w-full h-[17rem] duration-1000 group-hover:scale-125"
                 src={`../assets/images/${ne.image}`}
                 alt="news"
               />
-              <h1 className="text-[1.5rem] font-medium m-[1rem]">{ne.title}</h1>
+              </div>
+              <h1 className="text-[1.5rem] font-medium m-[1rem] group-hover:underline">{ne.title}</h1>
               <div className="flex flex-row m-[1rem]">
                 <p className="mr-[2rem]">
                   <PersonIcon style={{ fontSize: "1.4rem" }} /> {ne.author}
@@ -608,7 +612,7 @@ const News=()=>(
               <p className="m-[1rem] text-gray-500 text-[1.1rem]">
                 {ne.subTitle}
               </p>
-              <button className="m-[1rem] text-[1.1rem] hover:text-[#ab6034] font-semibold text-left text-gray-600">
+              <button className="m-[1rem] text-[1.1rem] group-hover:text-[#ab6034] font-semibold text-left text-gray-600">
                 View Post {" >"}
               </button>
             </div>
