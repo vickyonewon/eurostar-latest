@@ -21,6 +21,7 @@ import {
   luxuryRooms,
   standardRooms,
 } from "./constants/data";
+import Footer from '../../components/footer';
 
 
 const localizer = momentLocalizer(moment);
@@ -87,6 +88,9 @@ const RoomDetails = () => {
     case 'deluxe':
       rooms=deluxeRooms;
   }
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const handleStarClick = (starValue: any) => {
     setRating(starValue);
@@ -287,14 +291,14 @@ const RoomDetails = () => {
                   <p className="text-[1.2rem]">Name</p>
                   <input
                     type="text"
-                    className="w-[] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
+                    className="w-[15rem] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
                   />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-[1.2rem]">Email</p>
                   <input
                     type="text"
-                    className="lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
+                    className="w-[15rem] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
                   />
                 </div>
               </div>
@@ -502,6 +506,7 @@ const RoomDetails = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

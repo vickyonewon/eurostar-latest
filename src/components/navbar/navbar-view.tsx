@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex items-center py-3">
           <Link className="navbar-brand mr-10" to="/">
-            <img src="/assets/eurostar-logo.gif" alt="logo" className="w-36" data-aos='fade-right' />
+            <img src="/assets/eurostar-logo.gif" alt="logo" className="w-36 pl-[1rem]" />
           </Link>
           <button
             className="lg:hidden mx-4 text-white absolute right-2"

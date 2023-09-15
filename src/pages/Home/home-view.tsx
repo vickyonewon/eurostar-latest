@@ -96,22 +96,22 @@ const BriefSummary=()=>(
             <div className="w-fit m-auto">
               <img
                 src="/assets/images/hotelstarsicon.jpeg"
-                className="drop-shadow-2xl rounded-full absolute left-[17rem] w-[8rem] h-[8rem] m-[1rem] lg:ml-[2rem]"
+                className="drop-shadow-2xl rounded-full absolute left-[15rem] w-[8rem] h-[8rem] m-[1rem] lg:ml-[2rem]"
                 alt="hotel-star-icon"
                 data-aos="fade-right"
               />
               <img
                 src="/assets/images/toilet1.jpg"
-                className="w-[15rem] h-[15rem] m-[1rem] lg:ml-[2rem]"
+                className="w-[11rem] lg:w-[15rem] h-[15rem] m-[1rem] lg:ml-[2rem]"
                 alt="toilet1"
               />
               <img
                 src="/assets/images/toilet2.jpg"
-                className="w-[15rem] h-[17rem] m-[1rem] lg:ml-[18rem] ml-[13rem]"
+                className="w-[11rem] lg:w-[15rem] h-[17rem] m-[1rem] lg:ml-[18rem] ml-[13rem]"
                 alt="toilet2"
               />
               <div
-                className="absolute lg:left-[6rem] md:left-[12rem] top-[190vh] md:top-[190vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white"
+                className="absolute lg:left-[6rem] md:left-[12rem] top-[170vh] md:top-[190vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white"
                 data-aos="fade-up"
               >
                 <svg
@@ -501,7 +501,7 @@ const BookRoom=()=>{
             <input
               id="adults"
               type="number"
-              className=" p-[0.5rem]"
+              className="w-fit lg:p-[0.5rem]"
               placeholder="Adults"
             />
           </div>
@@ -515,7 +515,7 @@ const BookRoom=()=>{
             <input
               id="children"
               type="number"
-              className=" p-[0.5rem]"
+              className="w-fit lg:p-[0.5rem]"
               placeholder="Children"
             />
           </div>
@@ -530,7 +530,7 @@ const BookRoom=()=>{
 
         
 
-<div className="flex flex-col w-[100%] lg:w-[50rem] p-[2rem] lg:pl-[4rem]">
+<div className="flex flex-col w-[100%] lg:w-[50rem] p-[0.5rem] lg:p-[2rem] lg:pl-[4rem]">
           <p className="text-[1.3rem] font-medium text-[#ab6034] m-[1rem]">
             Our Testimonials
           </p>
@@ -623,6 +623,9 @@ const News=()=>(
 )
 
 const Home = () => {
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div>
       <Navbar />
@@ -631,6 +634,7 @@ const Home = () => {
       <QualityShow />
       <BookRoom />
       <News />
+      {/* <Footer /> */}
     </div>
   );
 };

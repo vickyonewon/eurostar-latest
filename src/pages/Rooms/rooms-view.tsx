@@ -3,9 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useRoomController from "./rooms-controller";
+import Footer from "../../components/footer";
 
 const Rooms = () => {
   const roomController = useRoomController();
+  
   return (
     <div>
       <Navbar />
@@ -318,6 +320,7 @@ const Rooms = () => {
               </button>
             </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -27,7 +27,9 @@ const useRoomController = () => {
   const handleChildren=(x: any)=>{
     setChildren(x);
   }
-
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const standardText=id && (id.slice(0, 1).toUpperCase() + id.slice(1, id.length));
   console.log(standardText);
 

@@ -20,6 +20,7 @@
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "bootstrap-icons": "^1.10.5",
+    "firebase-tools": "^12.5.4",
     "moment": "^2.29.4",
     "rc-calendar": "^9.15.11",
     "react": "^18.2.0",
