@@ -506,7 +506,6 @@ const RoomDetails = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

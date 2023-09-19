@@ -320,7 +320,6 @@ const Rooms = () => {
               </button>
             </div>
       </div>
-      <Footer />
     </div>
   );
 };

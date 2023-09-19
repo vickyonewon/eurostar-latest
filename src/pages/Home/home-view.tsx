@@ -634,7 +634,6 @@ const Home = () => {
       <QualityShow />
       <BookRoom />
       <News />
-      {/* <Footer /> */}
     </div>
   );
 };
