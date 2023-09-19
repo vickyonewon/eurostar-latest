@@ -15,7 +15,7 @@ function useNavbarController(){
     }
     const color=location.pathname==='/'? "#1d1b1a": "#f4f2f1";
     useEffect(()=>{
-      AOS.init({duration: 3000});
+      AOS.init({duration: 1000});
     })
 
     return {isRouteActive, isOpen, toggleMenu, color};

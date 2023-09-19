@@ -42,7 +42,7 @@ const HomeController = () => {
     };
   
     useEffect(() => {
-      Aos.init({ duration: 2000 });
+      Aos.init({ duration: 1000 });
     });
 
     return {activeItem, sliderRef, settings, settings2, handleStateChange};

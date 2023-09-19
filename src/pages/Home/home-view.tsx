@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/navbar-view";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { rooms, facilities, suites, customers, news } from "./constants/data";
-import AOS from "aos";
+import Aos from "aos";
 import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -586,11 +586,11 @@ const BookRoom=()=>{
 
 const News=()=>(
   <div>
-     <div className="flex flex-col pt-[7rem] pb-[5rem]">
-        <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]" data-aos="fade-right">
+     <div className="flex flex-col pt-[7rem] pb-[5rem]" data-aos="fade-right">
+        <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]">
           Stay With Us & Get More Updates Latest News & Blog
         </h1>
-        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]" data-aos="fade-right">
+        <div className="flex flex-col lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4] ">
           {news.map((ne, index) => (
             <div key={index} className="relative overflow-hidden group flex flex-col w-[96%] lg:w-[30rem] m-[1rem] bg-white border hover:border-b-4 hover:border-b-[#ab6034]">
               <div className="relative overflow-hidden">

@@ -72,7 +72,7 @@ const RoomDetails = () => {
   const [inquiryExtraInfo, setInquiryExtraInfo] = useState<any>("");
   const [activeButton, setActiveButton] = useState("booking");
 
-  let rooms: any[]=[]; 
+  let rooms: any[]=[];
 
   const { roomId } = useParams();
   switch(roomId){
@@ -110,10 +110,10 @@ const RoomDetails = () => {
         <span className="text-[#c59172] font-semibold">{standardText}</span>
       </div>
       <div className="flex flex-row justify-between pt-[4rem] px-[3rem] py-[1rem]">
-        <h1 className="text-[3rem] font-bold">{standardText} Rooms</h1>
-        <p className="text-[1.4rem] text-gray-500">
+        <h1 className="text-[1.8rem] lg:text-[3rem] font-bold">{standardText} Rooms</h1>
+        <p className="text-[1.2rem] lg:text-[1.4rem] text-gray-500">
           From{" "}
-          <span className="text-[#ab6034] text-[1.8rem] font-semibold">
+          <span className="text-[#ab6034] text-[1.4rem] lg:text-[1.8rem] font-semibold">
             {" "}
             ₹ 49 / NIGHT
           </span>
@@ -291,14 +291,14 @@ const RoomDetails = () => {
                   <p className="text-[1.2rem]">Name</p>
                   <input
                     type="text"
-                    className="w-[15rem] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
+                    className="w-[10rem] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
                   />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-[1.2rem]">Email</p>
                   <input
                     type="text"
-                    className="w-[15rem] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
+                    className="w-[10rem] lg:w-[20rem] h-[3rem] border-[1.5px] border-gray-400"
                   />
                 </div>
               </div>
