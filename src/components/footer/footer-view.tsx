@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="flex flex-row overflow-auto no-scrollbar">
         {footerImages.map((footerImage, index) => (
           <div
-            className="relative w-full lg:w-[22rem] h-[25rem]"
+            className="relative w-full h-[25rem]"
             key={index}
           >
             <img
@@ -60,9 +60,9 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col text-center lg:flex-row pt-[5rem] pb-[4rem] bg-[#201d1b] p-[2rem] lg:justify-between">
+      <div className="flex flex-col justify-center items-center text-center lg:flex-row pt-[5rem] pb-[4rem] bg-[#201d1b] p-[2rem] lg:justify-between">
         <div className="w-fit max-w-[23rem] m-[1rem]">
-          <h1 className="text-white text-[2.5rem] mb-[0.5rem] font-semibold">
+          <h1 className="text-white text-[2.5rem] lg:mb-[0.5rem] font-semibold">
             EurostarInn
           </h1>
           <p className="text-gray-400 text-[1.08rem] mb-[0.5rem]">
@@ -84,7 +84,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-fit max-w-[20rem] m-auto mb-[2rem] lg:ml-[4rem]">
+        <div className="w-fit max-w-[25rem] m-auto mb-[2rem]">
           <h1 className="text-[1.7rem] text-white">Quick Link</h1>
           <p className="text-gray-400 text-[1.1rem] mt-[0.6rem]">About Us</p>
           <p className="text-gray-400 text-[1.1rem] mt-[0.6rem]">Services</p>
@@ -92,7 +92,7 @@ const Footer = () => {
           <p className="text-gray-400 text-[1.1rem] mt-[0.6rem]">Latest News</p>
           <p className="text-gray-400 text-[1.1rem] mt-[0.6rem]">Contact Us</p>
         </div>
-        <div className="w-fit max-w-[20rem] m-auto mb-[2rem] lg:ml-[4rem]">
+        <div className="w-fit max-w-[20rem] m-auto mb-[2rem]">
           <h1 className="text-[1.7rem] text-white">Features</h1>
           <p className="text-gray-400 text-[1.1rem] mt-[0.6rem]">
             Free Transportation
@@ -108,7 +108,7 @@ const Footer = () => {
           </p>
           <p className="text-gray-400 text-[1.1rem] mt-[0.6rem]">Breakfast</p>
         </div>
-        <div className="w-fit max-w-[20rem] m-auto mb-[2rem] lg:ml-[4rem]">
+        <div className="w-fit max-w-[20rem] lg:m-auto mb-[2rem]">
           <h1 className="text-[1.7rem] text-white">News Letter</h1>
           <input
             type="email"
@@ -123,7 +123,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between bg-[#1d1b1a] p-[2rem]">
+      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between bg-[#1d1b1a] p-[2rem]">
         <div className="text-[1.2rem] text-white">
           © 2023 <span className="text-[#ab6034]">EurostarInn</span>. All Rights
           Reserved.
