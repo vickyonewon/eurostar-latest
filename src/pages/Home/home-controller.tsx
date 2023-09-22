@@ -2,6 +2,7 @@ import Aos from 'aos';
 import React, { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick';
 
+
 const HomeController = () => {
     const [activeItem, setActiveItem] = useState(0);
     const sliderRef=useRef<Slider | null>(null);
@@ -40,10 +41,6 @@ const HomeController = () => {
         sliderRef.current.slickGoTo(newStateValue);
       }
     };
-  
-    useEffect(() => {
-      Aos.init({ duration: 1000 });
-    });
 
     return {activeItem, sliderRef, settings, settings2, handleStateChange};
 }

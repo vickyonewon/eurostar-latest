@@ -158,7 +158,7 @@ const RoomDetails = () => {
         }
       </div>
 
-      <div className="flex flex-col lg:flex-row p-[1rem] lg:p-[3rem]">
+      <div className="flex flex-col w-[80rem] m-auto justify-center lg:flex-row p-[1rem] lg:p-[3rem]">
         <div className="flex flex-col lg:w-[60%]">
           <div>
             <h1 className="text-[2.7rem] font-semibold mb-[1rem]">
