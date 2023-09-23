@@ -14,14 +14,13 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import moment from "moment";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   deluxeRooms,
   executiveRooms,
   luxuryRooms,
   standardRooms,
 } from "./constants/data";
-import Footer from '../../components/footer';
 
 
 const localizer = momentLocalizer(moment);
@@ -45,11 +44,9 @@ const roomFacilities = [
 ];
 const myEventsList = [
   {
-    // title: 'Event 1',
     start: new Date(),
     end: new Date(),
   },
-  // Add more events here
 ];
 
 const RoomDetails = () => {
@@ -91,6 +88,20 @@ const RoomDetails = () => {
   useEffect(()=>{
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+  const handleBooking=(e: any)=>{
+    e.preventDefault();
+    if(!bookingCheckin || !bookingCheckout || !bookingAdults || !bookingChildren || !bookingQuantity){
+      return alert("All Fields are mandatory!");
+    }
+
+  }
+  const handleInquiry=(e: any)=>{
+    e.preventDefault();
+    if(!inquiryAddress || !inquiryAdults || !inquiryCheckin || !inquiryCheckout || !inquiryChildren || !inquiryEmail || !inquiryExtraInfo || !inquiryName || !inquiryNumber){
+      return alert("All Fields are mandatory!");
+      
+    }
+  }
 
   const handleStarClick = (starValue: any) => {
     setRating(starValue);
@@ -106,7 +117,7 @@ const RoomDetails = () => {
     <div>
       <Navbar />
       <div className="text-[1.3rem] text-center p-[2rem] bg-[#f6efea]">
-        Home . Hotel .{" "}
+        <Link to='/'>Home</Link> . Hotel .{" "}
         <span className="text-[#c59172] font-semibold">{standardText}</span>
       </div>
       <div className="flex flex-row justify-between pt-[4rem] px-[3rem] py-[1rem]">
@@ -393,7 +404,7 @@ const RoomDetails = () => {
                     />
                   </div>
                 </div>
-                <button className="w-full m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]">
+                <button onClick={handleBooking} className="w-full m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]">
                   BOOKING
                 </button>
               </form>
@@ -498,7 +509,7 @@ const RoomDetails = () => {
                     onChange={(e) => setInquiryExtraInfo(e.target.value)}
                   />
                 </div>
-                <button className="w-[70%] m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]">
+                <button onClick={handleInquiry} className="w-[70%] m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]">
                   SEND
                 </button>
               </form>

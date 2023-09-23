@@ -15,7 +15,6 @@ import HomeController from "./home-controller";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
 
-
 const Top = () => (
   <div className="bg-[#1d1b1a] bg-cover bg-no-repeat pb-[8rem]">
     <div className="flex flex-col lg:flex-row mb-[5rem] lg:pt-[5rem] relative z-[40]">
@@ -85,6 +84,20 @@ const Top = () => (
           </div>
         </Carousel>
       </div>
+      <div className="w-full bg-gradient-to-br from-black via-transparent to-ab6034 bg-cover bg-center animate-color h-[100px] flex">
+        <div
+          className="flex w-[400px] justify-end items-end absolute left-[2rem] bottom-[1rem]"
+          data-aos="fade-right"
+        >
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="rgb(110,66,41)"
+              d="M45.7,-49.9C61.7,-41,78.9,-29,74,-18.7C69.2,-8.4,42.2,0.2,31.6,18C21.1,35.9,26.9,62.9,20.2,72.9C13.6,82.8,-5.7,75.5,-23.5,67.7C-41.4,59.9,-57.9,51.4,-66.1,37.8C-74.3,24.3,-74.2,5.6,-66.7,-7.4C-59.2,-20.5,-44.4,-27.9,-32.1,-37.4C-19.7,-47,-9.9,-58.7,2.5,-61.6C14.8,-64.6,29.7,-58.8,45.7,-49.9Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 );
@@ -110,7 +123,7 @@ const BriefSummary = () => (
               className="w-[18rem] 2xl:w-[20rem] lg:w-[16rem] lg:h-[18rem] 2xl:h-[21rem] m-[1rem] lg:mr-[8vw] xl:ml-[25vw]"
               alt="toilet2"
             />
-            <div className="absolute lg:left-[15vw] md:left-[12rem] top-[200vh] lg:top-[215vh] 2xl:top-[170vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white">
+            <div className="absolute lg:left-[15vw] md:left-[12rem] top-[180vh] lg:top-[215vh] 2xl:top-[170vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="70"

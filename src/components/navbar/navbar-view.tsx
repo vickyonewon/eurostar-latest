@@ -1,4 +1,4 @@
-import { Link, } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom';
 import useNavbarController from './navbar-controller';
 
 interface props{
@@ -9,6 +9,10 @@ interface props{
 
 const Navbar = () => {
   const navbarController=useNavbarController();
+  const nav=useNavigate();
+  function handleBookNow(){
+    nav('/rooms');
+  }
 
   return (
     <nav className={`sticky top-0 z-[1000] bg-[${navbarController.color}]`}>
@@ -105,7 +109,7 @@ const Navbar = () => {
             <button className='border-none bg-[#ab6034] lg:hidden m-2 text-[1.1rem] text-white w-40 h-12 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
           </div>
           <div className='absolute right-10 top-3'>
-            <button className='border-none bg-[#ab6034] text-[1.1rem] hidden lg:block text-white w-40 h-14 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
+            <button onClick={handleBookNow} className='border-none bg-[#ab6034] text-[1.1rem] hidden lg:block text-white w-40 h-14 p-2 hover:bg-[#1f1c1b] border-[4px] hover:border-white'>Book Now {' >'}</button>
           </div>
           </div>
         </div>

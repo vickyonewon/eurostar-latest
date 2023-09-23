@@ -9,6 +9,7 @@ import Contact from './pages/Contact/index';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Footer from './components/footer';
+import Cart from './pages/Cart/index';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/rooms' element={<Rooms />} />
         <Route path='/rooms/:roomId' element={<RoomDetails />} />
         <Route path='/contact-us' element={<Contact />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       </BrowserRouter>
       <Footer />
