@@ -44,17 +44,9 @@ const Footer = () => {
               className="w-full h-full"
             />
             <div className="lg:animate-move-down p-[3rem] relative top-[-15.3rem] w-full h-full lg:absolute lg:top-0 inset-0 text-center opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center text-white bg-[#ab6034] no-scrollbar">
-              <a href="#">
-                <InstagramIcon
-                  className="w-fit m-auto h-fit"
-                  style={{ fontSize: "2.6rem" }}
-                />
-              </a>
-              <h1 className="text-[1.3rem] lg:text-[2rem] font-semibold max-w-[10rem] m-auto">
-                Follow Our Instagram
-              </h1>
+              
               <div className="bg-white m-auto w-[5rem] h-[5px]"></div>
-              <p className="text-[1.1rem] lg:text-[1.4rem] mb-[2rem]">
+              <p className="text-[1.5rem] lg:text-[1.4rem] mb-[2rem]">
                 Make A Call
               </p>
               <p className="text-[1.1rem] lg:text-[1.5rem] font-semibold mb-[2rem]">

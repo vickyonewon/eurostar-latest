@@ -407,21 +407,21 @@ const RoomDetails = () => {
             {activeButton == "booking" && (
               <form>
                 <div className="flex flex-row gap-4 my-[1rem] mb-[2rem]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Check-In</p>
                     <input
                       type="date"
-                      className="w-[] lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="dd-mm-YY"
                       value={bookingCheckin}
                       onChange={(e) => setBookingCheckin(e.target.value)}
                     />
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-[1.2rem]">Check-Out</p>
+                    <p className="text-[1.2rem] w-1/2">Check-Out</p>
                     <input
                       type="date"
-                      className="lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="dd-mm-YY"
                       value={bookingCheckout}
                       onChange={(e) => setBookingCheckout(e.target.value)}
@@ -430,28 +430,28 @@ const RoomDetails = () => {
                 </div>
 
                 <div className="flex flex-row gap-4 my-[1rem] mb-[2rem]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Adults</p>
                     <input
                       type="number"
-                      className="w-[10rem] lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       value={bookingAdults}
                       onChange={(e) => setBookingAdults(e.target.value)}
                     />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Children</p>
                     <input
                       type="number"
-                      className="w-[10rem] lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       value={bookingChildren}
                       onChange={(e) => setBookingChildren(e.target.value)}
                     />
                   </div>
                 </div>
 
-                <div className="flex flex-row gap-4 my-[2rem]">
-                  <div className="flex flex-col">
+                <div className="flex flex-row gap-4 my-[2rem] w-1/2">
+                  <div className="flex flex-col w-full">
                     <p className="text-[1.2rem]">Quantity</p>
                     <input
                       type="number"
@@ -472,21 +472,21 @@ const RoomDetails = () => {
             {activeButton == "inquiry" && (
               <form>
                 <div className="flex flex-row gap-4 my-[1rem] mb-[2rem]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Name</p>
                     <input
                       type="text"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="Your Name"
                       value={inquiryName}
                       onChange={(e) => setInquiryName(e.target.value)}
                     />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Email</p>
                     <input
                       type="email"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="your@gmail.com"
                       value={inquiryEmail}
                       onChange={(e) => setInquiryEmail(e.target.value)}
@@ -495,21 +495,21 @@ const RoomDetails = () => {
                 </div>
 
                 <div className="flex flex-row gap-4 my-[1rem] mb-[2rem]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Number</p>
                     <input
                       type="text"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="+66-4545688"
                       value={inquiryNumber}
                       onChange={(e) => setInquiryNumber(e.target.value)}
                     />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Address</p>
                     <input
                       type="text"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="Address"
                       value={inquiryAddress}
                       onChange={(e) => setInquiryAddress(e.target.value)}
@@ -518,11 +518,11 @@ const RoomDetails = () => {
                 </div>
 
                 <div className="flex flex-row gap-4 my-[1rem] mb-[2rem]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Adults</p>
                     <input
                       type="number"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       value={inquiryAdults}
                       onChange={(e) => setInquiryAdults(e.target.value)}
                     />
@@ -531,7 +531,7 @@ const RoomDetails = () => {
                     <p className="text-[1.2rem]">Children</p>
                     <input
                       type="number"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       value={inquiryChildren}
                       onChange={(e) => setInquiryChildren(e.target.value)}
                     />
@@ -539,21 +539,21 @@ const RoomDetails = () => {
                 </div>
 
                 <div className="flex flex-row gap-4 my-[1rem] mb-[2rem]">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Check-In</p>
                     <input
                       type="date"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="dd-mm-YY"
                       value={inquiryCheckin}
                       onChange={(e) => setInquiryCheckin(e.target.value)}
                     />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-1/2">
                     <p className="text-[1.2rem]">Check-Out</p>
                     <input
                       type="date"
-                      className="w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
+                      className="w-full h-[3rem] border-[1.5px] border-gray-300 p-[10px]"
                       placeholder="dd-mm-YY"
                       value={inquiryCheckout}
                       onChange={(e) => setInquiryCheckout(e.target.value)}
@@ -561,7 +561,7 @@ const RoomDetails = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col w-full">
                   <textarea
                     placeholder="Extra Information"
                     className="w-full h-[10rem] border-[1.5px] border-gray-300 p-[10px]"
