@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Navbar from "../../components/navbar";
 import ArchitectureIcon from "@mui/icons-material/Architecture";
@@ -14,14 +14,15 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import moment from "moment";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   deluxeRooms,
   executiveRooms,
   luxuryRooms,
   standardRooms,
 } from "./constants/data";
-
+import { useDispatch } from "react-redux";
+import cartSlice, { setCart } from "../../redux/features/cartSlice";
 
 const localizer = momentLocalizer(moment);
 
@@ -48,8 +49,30 @@ const myEventsList = [
     end: new Date(),
   },
 ];
+interface Room {
+  id: number;
+  image: string;
+  title: string;
+  adults: number;
+  size: number;
+  subTitle: number;
+  price: number;
+}
+interface CartItem{
+  checkin: string;
+  checkout: string;
+  adults: number;
+  children: number;
+  quantity: number;
+  rooms: Array<Room>;
+}
 
 const RoomDetails = () => {
+  const dispatch = useDispatch();
+  const nav=useNavigate();
+  const cartItems=useSelector((state: any)=> state.cart);
+  console.log(cartItems);
+
   const [value, onChange] = useState<Value>(new Date());
   const [rating, setRating] = useState(0);
   const [bookingCheckin, setBookingCheckin] = useState<any>("");
@@ -69,39 +92,66 @@ const RoomDetails = () => {
   const [inquiryExtraInfo, setInquiryExtraInfo] = useState<any>("");
   const [activeButton, setActiveButton] = useState("booking");
 
-  let rooms: any[]=[];
+  let rooms: any[] = [];
 
   const { roomId } = useParams();
-  switch(roomId){
-    case 'executive':
-      rooms=executiveRooms;
+  switch (roomId) {
+    case "executive":
+      rooms = executiveRooms;
       break;
-    case 'luxury':
-      rooms=luxuryRooms;
+    case "luxury":
+      rooms = luxuryRooms;
       break;
-    case 'standard':
-      rooms=standardRooms;
+    case "standard":
+      rooms = standardRooms;
       break;
-    case 'deluxe':
-      rooms=deluxeRooms;
+    case "deluxe":
+      rooms = deluxeRooms;
   }
-  useEffect(()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-  const handleBooking=(e: any)=>{
-    e.preventDefault();
-    if(!bookingCheckin || !bookingCheckout || !bookingAdults || !bookingChildren || !bookingQuantity){
-      return alert("All Fields are mandatory!");
-    }
 
-  }
-  const handleInquiry=(e: any)=>{
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  const handleBooking = (e: any) => {
     e.preventDefault();
-    if(!inquiryAddress || !inquiryAdults || !inquiryCheckin || !inquiryCheckout || !inquiryChildren || !inquiryEmail || !inquiryExtraInfo || !inquiryName || !inquiryNumber){
+    if (
+      !bookingCheckin ||
+      !bookingCheckout ||
+      !bookingAdults ||
+      !bookingChildren ||
+      !bookingQuantity
+    ) {
       return alert("All Fields are mandatory!");
-      
     }
-  }
+    const newCartItem = {
+      checkin: bookingCheckin,
+      checkout: bookingCheckout,
+      adults: bookingAdults,
+      children: bookingChildren,
+      quantity: bookingQuantity,
+      rooms: rooms,
+    };
+    dispatch(setCart([...cartItems, newCartItem]));
+    nav('/cart');
+  };
+
+  const handleInquiry = (e: any) => {
+    e.preventDefault();
+    if (
+      !inquiryAddress ||
+      !inquiryAdults ||
+      !inquiryCheckin ||
+      !inquiryCheckout ||
+      !inquiryChildren ||
+      !inquiryEmail ||
+      !inquiryExtraInfo ||
+      !inquiryName ||
+      !inquiryNumber
+    ) {
+      return alert("All Fields are mandatory!");
+    }
+  };
 
   const handleStarClick = (starValue: any) => {
     setRating(starValue);
@@ -111,17 +161,20 @@ const RoomDetails = () => {
     setActiveButton(button);
   };
 
-  const standardText=roomId && (roomId.slice(0, 1).toUpperCase() + roomId.slice(1, roomId.length));
+  const standardText =
+    roomId && roomId.slice(0, 1).toUpperCase() + roomId.slice(1, roomId.length);
 
   return (
     <div>
       <Navbar />
       <div className="text-[1.3rem] text-center p-[2rem] bg-[#f6efea]">
-        <Link to='/'>Home</Link> . Hotel .{" "}
+        <Link to="/">Home</Link> . Hotel .{" "}
         <span className="text-[#c59172] font-semibold">{standardText}</span>
       </div>
       <div className="flex flex-row justify-between pt-[4rem] px-[3rem] py-[1rem]">
-        <h1 className="text-[1.8rem] lg:text-[3rem] font-bold">{standardText} Rooms</h1>
+        <h1 className="text-[1.8rem] lg:text-[3rem] font-bold">
+          {standardText} Rooms
+        </h1>
         <p className="text-[1.2rem] lg:text-[1.4rem] text-gray-500">
           From{" "}
           <span className="text-[#ab6034] text-[1.4rem] lg:text-[1.8rem] font-semibold">
@@ -137,12 +190,11 @@ const RoomDetails = () => {
           Size: 160 ft2
         </div>
         <div className="flex flex-row mr-[1rem] text-gray-500">
-          <BedIcon style={{ fontSize: "1.6rem", color: "#ab6034" }} /> Beds:{" "}
-          {2}
+          <BedIcon style={{ fontSize: "1.6rem", color: "#ab6034" }} /> Beds: {2}
         </div>
         <div className="flex flex-row mr-[1rem] text-gray-500">
           <BathtubIcon style={{ fontSize: "1.6rem", color: "#ab6034" }} />{" "}
-          Bathrooms: { 1}
+          Bathrooms: {1}
         </div>
         <div className="flex flex-row mr-[1rem] text-gray-500">
           <PersonIcon style={{ fontSize: "1.6rem", color: "#ab6034" }} />{" "}
@@ -150,26 +202,31 @@ const RoomDetails = () => {
         </div>
         <div className="flex flex-row mr-[1rem] text-gray-500">
           <AccountCircleIcon style={{ fontSize: "1.6rem", color: "#ab6034" }} />{" "}
-          Children: { 2}
+          Children: {2}
         </div>
       </div>
       <div className="py-[2rem] w-[95%] m-auto">
         {
           <Carousel
-          interval={4000}
-          autoPlay={true}
-          infiniteLoop={true}
-          showThumbs={false}
-          className=""
-        >
-          {rooms.map((room: any)=>(
-            <img src={`/assets/images/${room.image}`} alt='room' className='h-[80vh]' />
-          ))}
-        </Carousel>
+            interval={4000}
+            autoPlay={true}
+            infiniteLoop={true}
+            showThumbs={false}
+            className=""
+          >
+            {rooms?.map((room: any) => (
+              <img
+              key={room.id}
+                src={`/assets/images/${room.image}`}
+                alt="room"
+                className="h-[80vh]"
+              />
+            ))}
+          </Carousel>
         }
       </div>
 
-      <div className="flex flex-col w-[80rem] m-auto justify-center lg:flex-row p-[1rem] lg:p-[3rem]">
+      <div className="flex flex-col w-[98vw] lg:w-full m-auto justify-center lg:flex-row p-[1rem] lg:p-[3rem]">
         <div className="flex flex-col lg:w-[60%]">
           <div>
             <h1 className="text-[2.7rem] font-semibold mb-[1rem]">
@@ -404,7 +461,10 @@ const RoomDetails = () => {
                     />
                   </div>
                 </div>
-                <button onClick={handleBooking} className="w-full m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]">
+                <button
+                  onClick={handleBooking}
+                  className="w-full m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]"
+                >
                   BOOKING
                 </button>
               </form>
@@ -509,7 +569,10 @@ const RoomDetails = () => {
                     onChange={(e) => setInquiryExtraInfo(e.target.value)}
                   />
                 </div>
-                <button onClick={handleInquiry} className="w-[70%] m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]">
+                <button
+                  onClick={handleInquiry}
+                  className="w-[70%] m-auto text-[1.2rem] mt-6 text-white bg-[#ab6034] font-semibold hover:bg-black px-[4rem] p-[0.8rem]"
+                >
                   SEND
                 </button>
               </form>

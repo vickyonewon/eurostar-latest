@@ -147,9 +147,10 @@ const Rooms = () => {
                   /per night
                 </p>
               </div>
-              <button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
+              <Link to='/rooms/standard'><button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
                 Book Now {" >"}
               </button>
+              </Link>
             </div>
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
             <Link to='/rooms/luxury'>
@@ -203,9 +204,11 @@ const Rooms = () => {
                   /per night
                 </p>
               </div>
+              <Link to='/rooms/luxury'>
               <button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
                 Book Now {" >"}
               </button>
+              </Link>
             </div>
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
             <Link to='/rooms/deluxe'>
@@ -259,9 +262,11 @@ const Rooms = () => {
                   /per night
                 </p>
               </div>
+              <Link to='/rooms/deluxe'>
               <button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
                 Book Now {" >"}
               </button>
+              </Link>
             </div>
             <div className="w-fit lg:w-[29rem] m-[0.8rem] bg-white">
             <Link to='/rooms/executive'>
@@ -315,9 +320,11 @@ const Rooms = () => {
                   /per night
                 </p>
               </div>
+              <Link to='/rooms/executive'>
               <button className="border-none w-[100%] font-bold bg-[#eeeceb] text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
                 Book Now {" >"}
               </button>
+              </Link>
             </div>
       </div>
     </div>

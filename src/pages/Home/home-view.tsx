@@ -13,10 +13,11 @@ import PersonIcon from "@mui/icons-material/Person";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import HomeController from "./home-controller";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 const Top = () => (
-  <div className="bg-[#1d1b1a] bg-cover bg-no-repeat pb-[8rem]">
+  <div className="bg-[#1d1b1a] bg-cover bg-no-repeat pb-[0] lg:pb-[5rem]">
     <div className="flex flex-col lg:flex-row mb-[5rem] lg:pt-[5rem] relative z-[40]">
       <div className="ml-[8%] flex flex-col p-2 mt-4 lg:mt-[20vh] z-[5]">
         <p
@@ -34,25 +35,24 @@ const Top = () => (
           Welcome Home
         </p>
         <h1
-          className="m-[0.5rem] text-[2rem] lg:text-[3rem] 2xl:text-[4rem] tracking-[0.12em] lg:w-fit text-white font-bold"
+          className="m-[0.5rem] text-[1.7rem] lg:text-[3rem] 2xl:text-[4rem] tracking-[0.12em] lg:w-fit text-white font-bold"
           data-aos="fade-down"
         >
           Enjoy Vacations
         </h1>
         <p
-          className="m-[0.5rem] text-[2rem] relative lg:text-[3rem] 2xl:text-[4rem] lg:w-[40rem] text-white font-bold"
+          className="m-[0.5rem] text-[1.7rem] relative lg:text-[3rem] 2xl:text-[4rem] lg:w-[40rem] text-white font-bold"
           data-aos="fade-down"
         >
           With{" "}
           <span className="italic font-medium z-[10]">EurostarInn Hotel</span>
         </p>
-        <button className="ml-[0.5rem] border-none bg-[#ab6034] text-[1.2rem] text-white w-fit py-4 px-6 mt-6 hover:bg-[#1f1c1b] border-[4px] hover:border-white">
+        <button className="ml-[0.5rem] border-none bg-[#ab6034] tetx-[1.1rem] lg:text-[1.2rem] text-white w-fit py-4 px-6 mt-6 hover:bg-[#1f1c1b] border-[4px] hover:border-white">
           Explore Our Rooms {" >"}
         </button>
       </div>
       <div
-        className="z-[2] relative lg:absolute lg:w-7/12 lg:right-[5rem] mt-[2rem]"
-        data-aos="fade-left"
+        className="z-[2] relative lg:absolute lg:w-7/12 lg:right-[5rem] mt-[3rem]"
       >
         <Carousel
           interval={4000}
@@ -63,21 +63,21 @@ const Top = () => (
         >
           <div className="justify-center items-center">
             <img
-              className="lg:h-[70vh] h-[25rem] w-[50rem]"
+              className="lg:h-[70vh] h-[30rem] w-[50rem]"
               src="/assets/images/front2.jpg"
               alt="gallery"
             />
           </div>
           <div>
             <img
-              className="lg:h-[70vh] h-[24rem] w-[50rem]"
+              className="lg:h-[70vh] h-[30rem] w-[50rem]"
               src="/assets/images/garden.jpg"
               alt="restro"
             />
           </div>
           <div>
             <img
-              className="lg:h-[70vh] h-[24rem] w-[50rem]"
+              className="lg:h-[70vh] h-[30rem] w-[50rem]"
               src="/assets/images/home_room.jpg"
               alt="room"
             />
@@ -120,10 +120,10 @@ const BriefSummary = () => (
             />
             <img
               src="/assets/images/toilet2.jpg"
-              className="w-[18rem] 2xl:w-[20rem] lg:w-[16rem] lg:h-[18rem] 2xl:h-[21rem] m-[1rem] lg:mr-[8vw] xl:ml-[25vw]"
+              className="w-[16rem] 2xl:w-[20rem] lg:h-[18rem] 2xl:h-[21rem] mb-[1rem] lg:m-[1rem] lg:mr-[8vw] xl:ml-[25vw]"
               alt="toilet2"
             />
-            <div className="absolute lg:left-[15vw] md:left-[12rem] top-[180vh] lg:top-[215vh] 2xl:top-[170vh] left-[1rem] flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white">
+            <div className="hidden absolute lg:left-[15vw] md:left-[12rem] top-[180vh] lg:top-[215vh] 2xl:top-[170vh] left-[1rem] lg:flex flex-col w-fit bg-[#ab6034] p-[1rem] text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="70"
@@ -144,7 +144,7 @@ const BriefSummary = () => (
           <p className="text-[#ab6034] font-semibold text-[1.2rem] m-[1rem]">
             About Company
           </p>
-          <h1 className="m-[1rem] text-[2.5rem] tracking-[.1em] font-semibold max-w-[40rem]">
+          <h1 className="m-[1rem] text-[2rem] lg:text-[2.5rem] tracking-[.1em] font-semibold max-w-[40rem]">
             World Class Luxury Hotel & Restaurant Near City
           </h1>
           <p className="m-[1rem] mb-[2rem] text-[1rem] text-gray">
@@ -191,19 +191,19 @@ const BriefSummary = () => (
           </div>
           <div className="flex lg:flex-row flex-col m-[1rem] p-[1rem] lg:justify-between justify-center items-center">
             <img
-              className="rounded-full w-[4.5rem] h-[4.5rem] mr-[2rem] m-[1rem]"
-              src="/assets/images/toilet3.jpg"
-              alt="toilet3"
+              className="rounded-full w-[5rem] h-[5rem] mr-[2rem] m-[1rem] border-[2px] border-amber-950"
+              src="/assets/images/ravisir-onewon.jpg"
+              alt="Ravi Sir"
             />
             <div className="flex flex-col p-[1rem] relative lg:left-[-2rem] m-[1rem]">
-              <h1 className="text-[1.4rem] text-medium">Robert Ravi Mishra</h1>
+              <h1 className="text-[1.4rem] text-medium">Ravi Kumar Mishra</h1>
               <p className="text-[1.1rem] text-gray-600">CEO & Founder</p>
             </div>
-            <img
-              className="w-[18rem] h-[4rem] m-[1rem]"
-              src="/assets/images/toilet4.jpg"
-              alt="toilet4"
-            />
+            <div
+              className="w-[18rem] text-[2.3rem] italic h-[4rem] m-[1rem]"
+            >
+              Ravi Mishra
+              </div>
           </div>
         </div>
       </div>
@@ -211,8 +211,8 @@ const BriefSummary = () => (
 
     <div className="flex flex-col">
       <div className="flex flex-col lg:flex-row 2xl:w-[80vw] 2xl:m-auto justify-between mb-[1.5rem]">
-        <div className="text-[2.5rem] font-medium w-[fit] lg:w-[30rem] ml-[2rem]">
-          Take A Look Our Luxury Rooms and Hotel
+        <div className="text-[2rem] lg:text-[2.2rem] lg:text-[2.5rem] font-medium w-[fit] lg:w-[30rem] ml-[2rem]">
+          Take A Look At Our Luxury Rooms and Hotel
         </div>
         <div className="">
           <button className="border-none bg-[#ab6034] text-[1.1rem] text-white w-fit py-4 px-6 mt-6 m-[2rem] hover:bg-[#1f1c1b] border-[4px] hover:border-white">
@@ -227,7 +227,7 @@ const BriefSummary = () => (
         {rooms.map((room) => (
           <div
             key={room.id}
-            className="group w-fit lg:w-[29rem] m-[0.8rem] bg-white overflow-hidden"
+            className="group w-fit lg:w-[26rem] m-[0.8rem] bg-white overflow-hidden"
           >
             <div className="overflow-hidden">
               <Link to={`/rooms/${room.id}`}>
@@ -238,7 +238,7 @@ const BriefSummary = () => (
                 />
               </Link>
             </div>
-            <div className="flex flex-col p-[1rem]">
+            <div className="flex flex-col p-[1rem] py-[2rem]">
               <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                 {room.title}
               </h1>
@@ -282,9 +282,11 @@ const BriefSummary = () => (
                 /per night
               </p>
             </div>
+            <Link to={`/rooms/${room.id}`}>
             <button className="border-none w-[100%] font-bold bg-[#eeeceb] group-hover:bg-[#ab6034] group-hover:text-white text-black hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white py-[0.7rem] px-6 mt-6 border-[4px] hover:border-white">
               Book Now {" >"}
             </button>
+            </Link>
           </div>
         ))}
       </div>
@@ -327,14 +329,14 @@ const BriefSummary = () => (
         <div className="bg-[#1d1b1a] flex flex-wrap justify-center items-center p-[1rem] w-full mb-[3rem] relative ">
           {facilities.map((fac, index) => (
             <div key={index} className="flex flex-row p-[1rem] mb-[1rem]">
-              <div className=" text-white mb-[1rem] mr-[1.5rem]">
+              <div className=" text-white mb-[1rem] mr-[1.3rem]">
                 {<fac.icon style={{ fontSize: "3rem" }} />}
               </div>
               <div className="flex flex-col">
                 <div className="text-[1.5rem] text-white font-semibold">
                   {fac.title}
                 </div>
-                <div className="text-[1.1rem] text-gray-400 w-[20rem] mt-[1rem]">
+                <div className="text-[1.1rem] text-gray-400 w-[18rem] mt-[1rem]">
                   {fac.content}
                 </div>
               </div>
@@ -348,10 +350,11 @@ const BriefSummary = () => (
 
 const QualityShow = () => {
   const useHomeController = HomeController();
+  const nav=useNavigate();
   return (
     <div>
       <div className="flex flex-col justify-center items-center pt-[5rem] pb-[8rem]">
-        <h1 className="text-center text-[2.5rem] w-full lg:w-[40rem] font-medium m-[2.25rem] mb-[4rem]">
+        <h1 className="text-center text-[2.2rem] lg:text-[2.5rem] w-full lg:w-[40rem] font-medium m-[2.25rem] mb-[4rem]">
           Explore Luxury Hotel & Suites Are People Choosing
         </h1>
         <div className="max-w-[90vw] w-fit m-auto">
@@ -364,7 +367,7 @@ const QualityShow = () => {
                 <div className="flex flex-col lg:flex-row w-full">
                   <div className="w-full lg:w-[55%] bg-[#f4f2f1]">
                     <div className="w-full flex flex-col p-[1rem] group">
-                      <h1 className="text-[2.2rem] font-medium m-[1rem]">
+                      <h1 className="text-[2rem] font-medium m-[1rem]">
                         {suite.title}
                       </h1>
                       <p className="text-[1.1rem] text-gray-500 font-medium m-[1rem] mb-[3rem]">
@@ -377,7 +380,7 @@ const QualityShow = () => {
                         </span>{" "}
                         /per night
                       </p>
-                      <button className="m-[1rem] w-[60%] font-medium hover:bg-[#ab6034] group-hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white group-hover:text-white py-[0.8rem] px-6 mt-6 border border-gray-400">
+                      <button onClick={()=> nav(`/rooms/${suite.title.split(' ')[0]}`)} className="m-[1rem] w-[60%] font-medium hover:bg-[#ab6034] group-hover:bg-[#ab6034] text-[1.1rem] text-center hover:text-white group-hover:text-white py-[0.8rem] px-6 mt-6 border border-gray-400">
                         Book Now {" >"}
                       </button>
                     </div>
@@ -405,7 +408,7 @@ const QualityShow = () => {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row p-[2rem] pt-[8rem] pb-[8rem] lg:max-w-[90%] w-fit m-auto justify-center items-center">
+      <div className="flex flex-col lg:flex-row p-[0] lg:p-[2rem] pt-[8rem] pb-[8rem] lg:max-w-[90%] w-fit m-auto justify-center items-center">
         <div className="flex flex-col w-full lg:w-5/12 p-[1rem]">
           <p className="text-[1.1rem] font-semibold text-[#ab6034] m-[1rem]">
             Food & Drink
@@ -445,7 +448,7 @@ const QualityShow = () => {
             Learn More Us {" >"}
           </button>
         </div>
-        <div className="w-full h-full lg:w-[45rem] lg:h-[32rem]">
+        <div className="w-full h-[20rem] lg:w-[45rem] lg:h-[32rem]">
           <img
             className="h-full"
             src="/assets/images/restaurant1.jpg"
@@ -464,7 +467,7 @@ const QualityShow = () => {
 const BookRoom = () => {
   const useHomeController = HomeController();
   return (
-    <div className="flex flex-col justify-center items-center w-auto m-auto lg:flex-row bg-[#1d1b1a] pt-[6rem] p-[2rem] pb-[6rem]">
+    <div className="flex flex-col justify-center items-center w-auto m-auto lg:flex-row bg-[#1d1b1a] pt-[6rem] p-[2rem] pb-[4rem]">
       <div className="flex flex-col bg-white w-fit px-[2rem] lg:w-[36rem] p-[2rem] h-fit 2xl:py-[5rem] duration-100">
         <p className="text-[1.2rem] text-[#ab6034] ml-[1rem]">
           Booking Your Room
@@ -595,14 +598,14 @@ const BookRoom = () => {
 const News = () => (
   <div>
     <div className="flex flex-col pt-[7rem] pb-[5rem] w-fit m-auto justify-center items-center">
-      <h1 className="text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]">
+      <h1 className="text-[2.2rem] lg:text-[2.5rem] font-semibold text-center m-auto w-[90%] lg:w-[40rem]">
         Stay With Us & Get More Updates Latest News & Blog
       </h1>
-      <div className="flex flex-wrap lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]">
+      <div className="flex flex-wrap justify-center items-center lg:flex-row p-[rem] lg:p-[2rem] bg-[#f4f4f4]">
         {news.map((ne, index) => (
           <div
             key={index}
-            className="relative overflow-hidden group flex flex-col w-[96%] lg:w-[25rem] m-[1rem] bg-white border hover:border-b-4 hover:border-b-[#ab6034]"
+            className="relative overflow-hidden group flex flex-col w-[96%] lg:w-[24rem] m-[1rem] bg-white border hover:border-b-4 hover:border-b-[#ab6034]"
           >
             <div className="relative overflow-hidden">
               <img

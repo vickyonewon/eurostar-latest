@@ -19,10 +19,10 @@ const About: React.FC = () => {
         >
           <h1 className="text-6xl font-semibold mb-4 relative">About Us</h1>
         </div>
-        <div className="sm:flex p-8">
+        <div className="sm:flex p-2 lg:p-8 pt-[2rem]">
           <div className="flex-1">
-            <p className="text-2xl pl-5 font-semibold mb-4">BEST AMENITIES</p>
-            <h1 className="text-6xl p-3 font-semibold mb-8 leading-relaxed">
+            <p className="text-[1.2rem] lg:text-2xl pl-5 font-semibold mb-4">BEST AMENITIES</p>
+            <h1 className="text-[2.4rem] lg:text-6xl p-[0.5rem] tracking-wider font-semibold mb-8 leading-relaxed lg:mt-[2.5rem]">
               Enjoy Your Vacation In <span className="text-[#9b804e]">Our</span>{" "}
               Hotel And Get Lots Of Fun, Happiness{" "}
               <span className="text-[#9b804e]">And</span> Great{" "}
@@ -41,13 +41,13 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="text-center p-8">
-          <h1 className="text-4xl font-semibold mb-4">HOTEL FACILITIES</h1>
+        <div className="text-center p-3 lg:p-8 mt-[4rem]">
+          <h1 className="text-[2rem] text-4xl font-semibold mb-4 underline p-4">HOTEL FACILITIES</h1>
           <div className="w-1/5 h-2 bg-brown mx-auto mb-6"></div>
-          <div className="w-1/2 mx-auto text-left space-y-4">
+          <div className="flex flex-wrap lg:grid grid-cols-3 space-y-4">
             {facilities.map((fac) => (
-              <div key={fac} className="flex items-center">
-                <CheckIcon className="w-6 h-6 text-brown mr-2" />
+              <div key={fac} className="flex items-center m-[2rem] border-2 p-[1rem] bg-gray-300">
+                <CheckIcon className="w-6 h-6 text-brown mr-3" />
                 <span className="text-lg">{fac}</span>
               </div>
             ))}

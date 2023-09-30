@@ -3,7 +3,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import {useEffect} from 'react';
+import { useEffect } from "react";
 import Aos from "aos";
 import "./footer.css";
 
@@ -27,15 +27,15 @@ const footerImages = [
 ];
 
 const Footer = () => {
-    useEffect(()=>{
-        Aos.init({delay: 2000});
-    })
+  useEffect(() => {
+    Aos.init({ delay: 2000 });
+  });
   return (
     <div className="flex flex-col z-[39]">
       <div className="flex flex-row overflow-auto no-scrollbar">
         {footerImages.map((footerImage, index) => (
           <div
-            className="relative w-full h-[25rem]"
+            className="relative w-full h-[15rem] lg:h-[25rem] lg:hover:scale-110 duration-1000"
             key={index}
           >
             <img
@@ -43,18 +43,22 @@ const Footer = () => {
               alt="footerimage"
               className="w-full h-full"
             />
-            <div className="animate-move-down relative top-[-24rem] w-full h-full lg:absolute lg:top-0 inset-0 text-center opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center text-white bg-[#ab6034] no-scrollbar">
-              <InstagramIcon
-                className="w-fit m-auto h-fit"
-                style={{ fontSize: "3rem" }}
-              />
-              <h1 className="text-[2rem] font-semibold max-w-[10rem] m-auto">
+            <div className="lg:animate-move-down p-[3rem] relative top-[-15.3rem] w-full h-full lg:absolute lg:top-0 inset-0 text-center opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center text-white bg-[#ab6034] no-scrollbar">
+              <a href="#">
+                <InstagramIcon
+                  className="w-fit m-auto h-fit"
+                  style={{ fontSize: "2.6rem" }}
+                />
+              </a>
+              <h1 className="text-[1.3rem] lg:text-[2rem] font-semibold max-w-[10rem] m-auto">
                 Follow Our Instagram
               </h1>
               <div className="bg-white m-auto w-[5rem] h-[5px]"></div>
-              <p className="text-[1.4rem] mb-[2rem]">Make A Call</p>
-              <p className="text-[1.5rem] font-semibold mb-[2rem]">
-                +000 0000 00000
+              <p className="text-[1.1rem] lg:text-[1.4rem] mb-[2rem]">
+                Make A Call
+              </p>
+              <p className="text-[1.1rem] lg:text-[1.5rem] font-semibold mb-[2rem]">
+                <a href="tel:+1234567890">+000 0000 00000</a>
               </p>
             </div>
           </div>
@@ -140,4 +144,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

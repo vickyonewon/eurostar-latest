@@ -1,9 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit';
-import roomReducer from './features/roomsSlice';
+import cartReducer from './features/cartSlice';
 
 const store=configureStore({
     reducer: {
-        rooms: roomReducer
+        cart: cartReducer,
     }
 })
 
