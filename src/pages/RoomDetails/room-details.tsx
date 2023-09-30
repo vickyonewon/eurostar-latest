@@ -417,8 +417,8 @@ const RoomDetails = () => {
                       onChange={(e) => setBookingCheckin(e.target.value)}
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <p className="text-[1.2rem] w-1/2">Check-Out</p>
+                  <div className="flex flex-col w-1/2">
+                    <p className="text-[1.2rem]">Check-Out</p>
                     <input
                       type="date"
                       className="w-full lg:w-[11rem] h-[3rem] border-[1.5px] border-gray-300 p-[10px]"

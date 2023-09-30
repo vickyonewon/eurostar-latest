@@ -48,7 +48,7 @@ const Cart = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block w-fit m-auto my-[5rem] border">
+      <div className="hidde lg:block w-fit m-auto my-[5rem] border">
         <table className="flex border-spacing-[2rem]">
           <tbody className="">
             <tr className="bg-gray-300 text-[1.4rem] font-bold">
@@ -106,70 +106,7 @@ const Cart = () => {
         </table>
       </div>
 
-      <div className="lg:hidden flex justify-center items-center m-[1rem]">
-        <table className="">
-          {cartController.cartItems?.map((cartItem: CartItem) => (
-            <div key={cartItem.rooms[0].id} className="border m-[1rem]">
-              <tr>
-                <td className="px-[2rem] p-[0.6rem] font-bold text-[1.2rem] mb-[1rem]">
-                  Product:
-                </td>
-                <td className="px-[2rem] p-[0.6rem]">
-                  {cartItem.rooms[0].title}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem]">Check-in Date:</td>
-                <td className="px-[2rem] p-[0.6rem]">
-                  {cartItem.checkin}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem]">Check-out Date:</td>
-                <td className="px-[2rem] p-[0.6rem]">
-                  {cartItem.checkout}
-                </td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem]">Adults:</td>
-                <td className="px-[2rem] p-[0.6rem]">{cartItem.adults}</td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem]">Children:</td>
-                <td className="px-[2rem] p-[0.6rem]">{cartItem.children}</td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem]">Quantity:</td>
-                <td className="px-[2rem] p-[0.6rem]">{cartItem.quantity}</td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem] font-bold text-[1.2rem] mb-[1rem]">
-                  Price:
-                </td>
-                <td className="px-[2rem] p-[0.6rem]">₹ {cartItem.rooms[0].price}</td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem] font-bold text-[1.2rem] mb-[1rem]">
-                  Quantity:
-                </td>
-                <td className="px-[2rem] p-[0.6rem]">
-                {cartController.calculateNumberOfDays(
-                    cartItem.checkin,
-                    cartItem.checkout
-                  )}{" "}
-                  Days
-                </td>
-              </tr>
-              <tr>
-                <td className="px-[2rem] p-[0.6rem] font-bold text-[1.2rem] mb-[1rem]">
-                  Subtotal:
-                </td>
-                <td className="px-[2rem] p-[0.6rem]">{cartItem.rooms[0].price}</td>
-              </tr>
-            </div>
-          ))}
-        </table>
-      </div>
+      
 
       <div className="flex justify-end m-[2rem]">
         <div className="flex flex-col w-full lg:w-1/2 justify-end text-[1.1rem]">
