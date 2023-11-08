@@ -17,7 +17,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const Top = () => (
-  <div className="bg-[#1d1b1a] bg-cover bg-no-repeat pb-[0] lg:pb-[5rem]">
+  // <div className="bg-[url('/public/assets/herobg.jpg')]  bg-cover bg-no-repeat pb-[0] lg:pb-[5rem]">
+   
+  <div className="bg-gradient-to-t from-[#1d1b1a] via-[#8A502E] to-[#1d1b1a] bg-cover bg-no-repeat pb-[0] lg:pb-[5rem]">
     <div className="flex flex-col lg:flex-row mb-[5rem] lg:pt-[5rem] relative z-[40]">
       <div className="ml-[8%] flex flex-col p-2 mt-4 lg:mt-[20vh] z-[5]">
         <p

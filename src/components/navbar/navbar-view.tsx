@@ -20,12 +20,12 @@ const Navbar = () => {
   return (
     <nav className={`sticky top-0 z-[1000] bg-[${navbarController.color}]`}>
       <div className="container mx-auto">
-        <div className="flex items-center py-3">
+        <div className="flex items-center py-2">
           <Link className="navbar-brand mr-10" to="/">
             <img
-              src="/assets/eurostar-logo.gif"
+              src="/assets/eurostar-logo.png"
               alt="logo"
-              className="w-36 pl-[1rem]"
+              className="w-30 pl-[1rem]"
             />
           </Link>
           <button
@@ -34,7 +34,7 @@ const Navbar = () => {
             aria-label="Toggle navigation"
           >
             <svg
-              className="w-6 h-6"
+              className="w-9 h-9"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -44,14 +44,14 @@ const Navbar = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={3}
                   d="M6 18L18 6M6 6l12 12"
                 />
               ) : (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={3}
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               )}
@@ -62,9 +62,10 @@ const Navbar = () => {
               navbarController.isOpen ? "block" : "hidden"
             }`}
           >
-            <div className={`absolute w-[70vw] mt-[4rem] lg:m-0 left-0 top-0 duration-500 bg-[${navbarController.color}] text-white h-[100vh] lg:h-fit px-[1rem] py-[1rem] flex flex-col lg:p-0 lg:bg-inherit lg:relative lg:flex-row lg:space-x-10 lg:justify-center items-center`}>
+            <div className={`absolute w-[70vw] items-baseline lg:m-0 left-0 top-0 duration-500
+             bg-[${navbarController.color}] text-white h-[100vh] lg:h-fit px-[2rem] py-[6rem]  flex flex-col lg:p-0 lg:bg-inherit lg:relative lg:flex-row lg:space-x-10 lg:justify-center items-center`}>
               <Link
-                className={`nav-link text-[1.3rem] hover:text-[#a45c32] ${
+                className={`nav-link text-[1.3rem] hover:text-[#a45c32]  ${
                   navbarController.isRouteActive("/")
                     ? "text-[#a45c32]"
                     : `text-${
@@ -76,7 +77,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32] ${
+                className={`nav-link text-[1.3rem] m-2 hover:text-[#a45c32]  ${
                   navbarController.isRouteActive("/about")
                     ? "text-[#a45c32]"
                     : `text-${
@@ -100,7 +101,7 @@ const Navbar = () => {
                   }`}
                   to="/rooms"
                 >
-                  Rooms
+                  Rooms<span className=" ml-5 items-center">&#8893;</span>
                 </Link>
                 <ul className="group dropdown-menu border justify-center items-center text-center text-black bg-white border-gray-800 w-[15rem] hidden rounded rounded-1xl absolute z-[1000] py-[2rem] mt-0 space-y-2 group-hover:block">
                   <li>
