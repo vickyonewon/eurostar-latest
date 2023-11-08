@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import Navbar from "../../components/navbar/navbar-view";
-import { enjoyList, facilities } from "./constants/data";
-import Footer from "../../components/footer";
-
+import { enjoyList, facilitie } from "../../components/constants/data";
 
 const About: React.FC = () => {
   useEffect(()=>{
@@ -45,7 +43,7 @@ const About: React.FC = () => {
           <h1 className="text-[2rem] text-4xl font-semibold mb-4 underline p-4">HOTEL FACILITIES</h1>
           <div className="w-1/5 h-2 bg-brown mx-auto mb-6"></div>
           <div className="flex flex-wrap lg:grid grid-cols-3 space-y-4">
-            {facilities.map((fac) => (
+            {facilitie.map((fac) => (
               <div key={fac} className="flex items-center m-[2rem] border-2 p-[1rem] bg-gray-300">
                 <CheckIcon className="w-6 h-6 text-brown mr-3" />
                 <span className="text-lg">{fac}</span>
