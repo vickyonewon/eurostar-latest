@@ -11,7 +11,7 @@ const BriefSummary: React.FC = () => {
             <div className="w-fit m-auto grid justify-center items-center grid-cols-2 gap-2 ">
               <img
                 src="/assets/images/toilet1.jpg"
-                className="2xl:w-[26rem] lg:w-[16rem] lg:h-[18rem] 2xl:h-[22rem]"
+                className="2xl:w-[28rem] lg:w-[23rem] lg:h-[18rem] 2xl:h-[22rem]"
                 alt="toilet1"
               />
               <div className="flex-1 justify-center items-center rounded-full  p-2 bg-[#ab6034] ml-4  w-[12rem] h-[12rem]">
@@ -46,7 +46,7 @@ const BriefSummary: React.FC = () => {
               </div>
               <img
                 src="/assets/images/toilet2.jpg"
-                className="w-[16rem] 2xl:w-[26rem] lg:h-[18rem] 2xl:h-[22rem] mb-[1rem] "
+                className="2xl:w-[26rem] lg:w-[23rem] lg:h-[18rem] 2xl:h-[22rem] mb-[1rem] "
                 alt="toilet2"
               />
             </div>

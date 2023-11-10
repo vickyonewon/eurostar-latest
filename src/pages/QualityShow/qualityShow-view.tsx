@@ -46,9 +46,9 @@ const QualityShow = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="w-full lg:w-[40%]">
+                  <div className="w-full lg:w-[55%] overflow-hidden">
                     <img
-                      className="h-[25rem] w-full"
+                      className="h-[27rem] w-full hover:scale-110 transition duration-500 cursor-pointer object-cover"
                       src={`/assets/images/${suite.image}`}
                       alt="rooms slides"
                     />
