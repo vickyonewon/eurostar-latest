@@ -23,6 +23,7 @@ const HeroSection: React.FC = () => {
           />{" "}
           Welcome Home
         </p>
+        
         <h1
           className="m-[0.5rem] text-[1.7rem] lg:text-[3rem] 2xl:text-[3rem] tracking-[0.12em] lg:w-fit text-white font-bold"
           data-aos="fade-down"
@@ -71,7 +72,9 @@ const HeroSection: React.FC = () => {
               alt="room"
             />
           </div>
-        </Carousel>
+        </Carousel>  <svg className="absolute blur-3xl right-0 opacity-80" width="60%" height="100%" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_60)"><g filter="url(#filter0_f_17_60)"><path d="M128.6 0H0V322.2L332.5 211.5L128.6 0Z" fill="#8A502E"></path><path d="M0 322.2V400H240H320L332.5 211.5L0 322.2Z" fill="#8A502E">
+      </path><path d="M320 400H400V78.75L332.5 211.5L320 400Z" fill="#8A502E"></path><path d="M400 0H128.6L332.5 211.5L400 78.75V0Z" fill="#8A502E"></path></g></g><defs><filter id="filter0_f_17_60" x="-159.933" y="-159.933" width="719.867" height="719.867" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"> </feBlend><feGaussianBlur stdDeviation="79.9667" result="effect1_foregroundBlur_17_60"></feGaussianBlur> </filter></defs></svg>
+    
       </div>
       <div className="w-full bg-gradient-to-br from-[#1d1b1a] via-[#8A502E]  to-[#1d1b1a]  from-black via-transparent to-ab6034 bg-cover bg-center animate-color h-[100px] flex">
         <div

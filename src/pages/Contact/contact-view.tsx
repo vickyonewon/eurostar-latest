@@ -16,22 +16,19 @@ const Contact = () => {
   return (
     <div>
       <Navbar />
-      <div
-        className="h-[85vh] bg-cover"
-        style={{ backgroundImage: `url('/assets/images/deluxe4.jpg')` }}
-      >
-        <div className="pt-[7rem]">
-          <h1 className="text-center text-[5rem] font-bold text-white">
-            Contact
-          </h1>
-          <p className="text-center text-[1.8rem] font-semibold text-white">
-            <span>
-              <Link to="/">Home</Link>
-            </span>{" "}
-            . Contact
-          </p>
-        </div>
-      </div>
+      <div className="relative h-[85vh] bg-cover" style={{ backgroundImage: `url('/assets/images/contact01.jpg')` }}>
+  <div className="absolute inset-0 backdrop-brightness-50"></div>
+  <div className="pt-[7rem] text-center text-[5rem] font-bold text-white">
+    <h1>Contact</h1>
+    <p className="text-[1.8rem] font-semibold">
+      <span>
+        <Link to="/">Home</Link>
+      </span>{" "}
+      . Contact
+    </p>
+  </div>
+</div>
+s
       <div className="flex flex-col lg:flex-row py-[8rem] p-[1rem] lg:p-[3rem] justify-between">
         <div className="flex flex-col lg:w-1/2">
           <p className="text-[1.2rem] font-semibold text-[#b06940]">

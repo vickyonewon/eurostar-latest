@@ -3,6 +3,11 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import BedIcon from '@mui/icons-material/Bed';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import SpaIcon from '@mui/icons-material/Spa';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import EmojiTransportationIcon from '@mui/icons-material/EmojiTransportation';
+import FestivalIcon from '@mui/icons-material/Festival';
+
+
 
 export const enjoyList=[
   {
@@ -65,7 +70,7 @@ export const rooms = [
       adults: 2,
       size: 410,
       subTitle: "All our Room have big windows to help you take a broad..",
-      price: 49,
+      price: 1000,
     },
     {
       id: 'luxury',
@@ -74,7 +79,7 @@ export const rooms = [
       adults: 2,
       size: 410,
       subTitle: "All our Room have big windows to help you take a broad..",
-      price: 49,
+      price: 1250,
     },
     {
       id: 'deluxe',
@@ -83,7 +88,7 @@ export const rooms = [
       adults: 2,
       size: 410,
       subTitle: "All our Room have big windows to help you take a broad..",
-      price: 49,
+      price: 1500,
     },
   ];
   
@@ -94,28 +99,28 @@ export const facilities=[
       content: 'At vero eos accusamus eustonis simos duc blanditiis praesente tatum',
     },
     {
-        icon: PedalBikeIcon,
-        title: 'Fitness Center',
+        icon: EmojiTransportationIcon,
+        title: 'Transportation',
         content: 'At vero eos accusamus eustonis simos duc blanditiis praesente tatum',
       },
       {
-        icon: PedalBikeIcon,
-        title: 'Fitness Center',
+        icon: RestaurantIcon,
+        title: 'Food & Restaurants',
         content: 'At vero eos accusamus eustonis simos duc blanditiis praesente tatum',
       },
       {
-        icon: PedalBikeIcon,
-        title: 'Fitness Center',
+        icon: SelfImprovementIcon,
+        title: 'Yoga Center',
         content: 'At vero eos accusamus eustonis simos duc blanditiis praesente tatum',
       },
       {
-        icon: PedalBikeIcon,
-        title: 'Fitness Center',
+        icon: SpaIcon,
+        title: 'Message Center',
         content: 'At vero eos accusamus eustonis simos duc blanditiis praesente tatum',
       },
       {
-        icon: PedalBikeIcon,
-        title: 'Fitness Center',
+        icon: FestivalIcon,
+        title: 'Tourism Guide',
         content: 'At vero eos accusamus eustonis simos duc blanditiis praesente tatum',
       },
     
@@ -125,25 +130,25 @@ export const suites=[
     {
         title: 'Executive Room',
         subTitle: 'All our Rooms have big windows to help you take...',
-        price: 69,
+        price: 1000,
         image: 'executive2.jpg'
     },
     {
         title: 'Deluxe Room',
         subTitle: 'All our Rooms have big windows to help you take...',
-        price: 69,
+        price: 1500,
         image: 'deluxe2.jpg'
     },
     {
         title: 'Luxury Room',
         subTitle: 'All our Rooms have big windows to help you take...',
-        price: 69,
+        price: 1250,
         image: 'luxury2.jpg'
     },
     {
         title: 'Standard Room',
         subTitle: 'All our Rooms have big windows to help you take...',
-        price: 69,
+        price: 1000,
         image: 'standard2.jpg'
     }
 ]
@@ -152,28 +157,28 @@ export const customers=[
   {
     id: 0,
       content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
-      name: 'Robert Ravi Mishra',
+      name: 'Ravi Mishra',
       profession: 'CEO & Founder',
       image: 'toilet1.jpg'
   },
   {
     id: 1,
     content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
-    name: 'Robert Ravi Mishra',
+    name: 'Ravi Mishra',
     profession: 'Web Developer',
     image: 'toilet1.jpg'
 },
 {
   id: 2,
   content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
-  name: 'Robert Ravi Mishra',
+  name: 'Ravi Mishra',
   profession: 'Software Developer',
   image: 'toilet1.jpg'
 },
 {
   id: 3,
   content: 'All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you take All our Rooms have big windows to help you takeAll our Rooms have big windows to help you take',
-  name: 'Robert Ravi Mishra',
+  name: 'Ravi Mishra',
   profession: 'CEO & Founder',
   image: 'toilet1.jpg'
 },

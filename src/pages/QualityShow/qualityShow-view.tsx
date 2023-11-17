@@ -87,9 +87,9 @@ const QualityShow = () => {
               style={{ fontSize: "2rem" }}
             />
             <div className="flex flex-col">
-              <h1 className="text-[1.5rem]">Free breakfast, tea & coffee</h1>
+              <h1 className="text-[1.5rem]">Quality Foods & kitchen</h1>
               <p className="text-[1rem] text-gray-500">
-                To take a trivial example, which undertakes laborious
+              Elevate Your Tastebuds with Quality Foods & Kitchen
               </p>
             </div>
           </div>
@@ -99,9 +99,9 @@ const QualityShow = () => {
               style={{ fontSize: "2rem" }}
             />
             <div className="flex flex-col">
-              <h1 className="text-[1.5rem]">Free breakfast, tea & coffee</h1>
+              <h1 className="text-[1.5rem]">Gastronomic Haven</h1>
               <p className="text-[1rem] text-gray-500">
-                To take a trivial example, which undertakes laborious
+              Elevating flavors, one dish at a time. Discover the art of Quality Foods & Kitchen.
               </p>
             </div>
           </div>

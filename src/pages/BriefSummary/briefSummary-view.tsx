@@ -10,9 +10,9 @@ const BriefSummary: React.FC = () => {
           <div className="justify-center items-center w-fit p-6 ">
             <div className="w-fit m-auto grid justify-center items-center grid-cols-2 gap-2 ">
               <img
-                src="/assets/images/toilet1.jpg"
+                src="/assets/images/garden1.jpg"
                 className="2xl:w-[28rem] lg:w-[23rem] lg:h-[18rem] 2xl:h-[22rem]"
-                alt="toilet1"
+                alt="not abl"
               />
               <div className="flex-1 justify-center items-center rounded-full  p-2 bg-[#ab6034] ml-4  w-[12rem] h-[12rem]">
                 <svg
@@ -45,9 +45,9 @@ const BriefSummary: React.FC = () => {
                 <p className="italic">Videos</p>
               </div>
               <img
-                src="/assets/images/toilet2.jpg"
+                src="/assets/images/restaurant01.jpg"
                 className="2xl:w-[26rem] lg:w-[23rem] lg:h-[18rem] 2xl:h-[22rem] mb-[1rem] "
-                alt="toilet2"
+                alt="restaurant01"
               />
             </div>
           </div>
@@ -136,6 +136,7 @@ const BriefSummary: React.FC = () => {
         <div
           className={`flex flex-col lg:flex-row justify-center items-center p-[1.5rem] relative z-[5] bg_gradient_sharp`}
         >
+          
           {rooms.map((room) => (
             <div
               key={room.id}
@@ -153,6 +154,7 @@ const BriefSummary: React.FC = () => {
               <div className="flex flex-col p-[1rem] py-[2rem]">
                 <h1 className="text-[1.8rem] font-bold my-[0.7rem]">
                   {room.title}
+                  
                 </h1>
                 <div className="flex flex-row">
                   <div className="flex flex-row text-[1.15rem] text-gray-600 mr-[1.7rem] mb-[1rem]">
@@ -203,13 +205,32 @@ const BriefSummary: React.FC = () => {
           ))}
         </div>
         <div className="bg-[#1d1b1a] bg-cover bg-no-repeat h-fit z-[4]">
+          <svg className="absolute blur-3xl right-0 opacity-80" width="40%" height="100%" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_60)"><g filter="url(#filter0_f_17_60)"><path d="M128.6 0H0V322.2L332.5 211.5L128.6 0Z" fill="#8A502E"></path><path d="M0 322.2V400H240H320L332.5 211.5L0 322.2Z" fill="#8A502E">
+      </path><path d="M320 400H400V78.75L332.5 211.5L320 400Z" fill="#8A502E"></path><path d="M400 0H128.6L332.5 211.5L400 78.75V0Z" fill="#8A502E"></path></g></g><defs><filter id="filter0_f_17_60" x="-159.933" y="-159.933" width="719.867" height="719.867" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"> </feBlend><feGaussianBlur stdDeviation="79.9667" result="effect1_foregroundBlur_17_60"></feGaussianBlur> </filter></defs></svg>
+     
           <div className="flex flex-wrap justify-center items-center lg:flex-row py-[2rem] pt-[8rem] relative ">
             <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
               <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
-                49 +
+                2+
               </div>
               <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
                 Luxury Hotels
+              </div>
+            </div>
+            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
+              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
+                48+
+              </div>
+              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
+                Luxury Room
+              </div>
+            </div>
+            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
+              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
+              80+
+              </div>
+              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
+              Regular Guests
               </div>
             </div>
             <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
@@ -218,28 +239,16 @@ const BriefSummary: React.FC = () => {
               </div>
               <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
                 Luxury Hotels
-              </div>
+              </div><svg className="absolute blur-3xl right-0 opacity-80" width="60%" height="100%" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_60)"><g filter="url(#filter0_f_17_60)"><path d="M128.6 0H0V322.2L332.5 211.5L128.6 0Z" fill="#8A502E"></path><path d="M0 322.2V400H240H320L332.5 211.5L0 322.2Z" fill="#8A502E">
+      </path><path d="M320 400H400V78.75L332.5 211.5L320 400Z" fill="#8A502E"></path><path d="M400 0H128.6L332.5 211.5L400 78.75V0Z" fill="#8A502E"></path></g></g><defs><filter id="filter0_f_17_60" x="-159.933" y="-159.933" width="719.867" height="719.867" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"> </feBlend><feGaussianBlur stdDeviation="79.9667" result="effect1_foregroundBlur_17_60"></feGaussianBlur> </filter></defs></svg>
+     
             </div>
-            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
-              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
-                49 +
-              </div>
-              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
-                Luxury Hotels
-              </div>
-            </div>
-            <div className="flex flex-col text-center w-[18rem] p-[1rem] mx-[1rem]">
-              <div className="bg-[#ab6034] text-[4rem] p-[0.8rem] text-white">
-                49 +
-              </div>
-              <div className="text-[1.5rem] p-[0.5rem] bg-white text-black">
-                Luxury Hotels
-              </div>
-            </div>
-          </div>
+          </div>   
 
           <div className="bg-[#1d1b1a] flex flex-wrap justify-center items-center p-[1rem] w-full mb-[3rem] relative ">
-            {facilities.map((fac, index) => (
+          <svg className="absolute blur-3xl right-0 opacity-80" width="50%" height="100%" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_17_60)"><g filter="url(#filter0_f_17_60)"><path d="M128.6 0H0V322.2L332.5 211.5L128.6 0Z" fill="#8A502E"></path><path d="M0 322.2V400H240H320L332.5 211.5L0 322.2Z" fill="#8A502E">
+      </path><path d="M320 400H400V78.75L332.5 211.5L320 400Z" fill="#8A502E"></path><path d="M400 0H128.6L332.5 211.5L400 78.75V0Z" fill="#8A502E"></path></g></g><defs><filter id="filter0_f_17_60" x="-159.933" y="-159.933" width="719.867" height="719.867" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"> </feBlend><feGaussianBlur stdDeviation="79.9667" result="effect1_foregroundBlur_17_60"></feGaussianBlur> </filter></defs></svg>
+                  {facilities.map((fac, index) => (
               <div key={index} className="flex flex-row p-[1rem] mb-[1rem]">
                 <div className=" text-white mb-[1rem] mr-[1.3rem]">
                   {<fac.icon style={{ fontSize: "3rem" }} />}
